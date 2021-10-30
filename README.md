@@ -2,7 +2,7 @@
 <hr>
 Repositori ini berisi tentang projek yang dikerjakan oleh ALPHANCODERS TEAM 👻(Kelompok 1)
 
-### Nama Anggota
+### NAMA ANGGOTA:
 <hr>
 <ul>
   <li>Abdul Hafidh(CEO)</li>
