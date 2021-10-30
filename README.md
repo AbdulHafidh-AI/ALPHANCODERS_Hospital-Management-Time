@@ -5,12 +5,12 @@ Repositori ini berisi tentang projek yang dikerjakan oleh ALPHANCODERS TEAM 👻
 ### NAMA ANGGOTA:
 <hr>
 <ul>
-  <li>Abdul Hafidh(CEO)</li>
-  <li>Hadafee Mudo</li>
-   <li>Nurfajriati</li>
-   <li>Teuku Muhhamad Roy Adrian</li>
-   <li>Putri Maulida</li>
-   <li>M. Khawari Putra</li>
+  <li>Abdul Hafidh (CEO) : 2008107010056</li>
+  <li>Hadafee Mudo : 	2008107010101</li>
+   <li>Nurfajriati : 	2008107010094</li>
+   <li>Teuku Muhhamad Roy Adrian : 2008107010069</li>
+   <li>Putri Maulida : 	2008107010074</li>
+   <li>M. Khawari Putra : 2008107010038</li>
 </ul>
 
 <h3 align="left"><b>PROGRAMMING LANGUAGE:</b></h3>
