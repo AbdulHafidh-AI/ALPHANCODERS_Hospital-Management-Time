@@ -1,7 +1,9 @@
 ### ALPHANCODERS_PROJEK-KELOMPOK-1 👻
+<hr>
 Repositori ini berisi tentang projek yang dikerjakan oleh ALPHANCODERS TEAM 👻(Kelompok 1)
 
 ### Nama Anggota
+<hr>
 <ul>
   <li>Abdul Hafidh(CEO)</li>
   <li>Hadafee Mudo</li>
