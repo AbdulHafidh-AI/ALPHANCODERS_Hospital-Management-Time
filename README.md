@@ -11,7 +11,7 @@ Pada projek ini kami akan membuat suatu sistem tentang suatu permasalahan di rum
    <li>Nurfajriati : 	2008107010094</li>
    <li>Teuku Muhhamad Roy Adrian : 2008107010069</li>
    <li>Putri Maulida : 	2008107010074</li>
-   <li>M. Khawari Putra : 2008107010038</li>
+   <li>M. Khawaril Putra : 2008107010038</li>
 </ul>
 
 <h3 align="left"><b>PROGRAMMING LANGUAGE:</b></h3>
