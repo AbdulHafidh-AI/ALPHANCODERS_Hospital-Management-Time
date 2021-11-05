@@ -1,7 +1,8 @@
 ### ALPHANCODERS TEAM 
 <hr>
 Repositori ini berisi tentang projek yang dikerjakan oleh ALPHANCODERS TEAM (Kelompok 1).
-Pada projek ini kami akan membuat suatu sistem tentang suatu permasalahan di rumah sakit, yakni, Kami akan membuat suatu sistem untuk pergantian jam kerja di rumah sakit untuk Dokter dan Perawat.
+Pada projek ini kami akan membuat suatu Aplikasi tentang suatu permasalahan pada jam kerja di rumah sakit.
+Jadi dengan Aplikasi ini kami bisa membantu para administrasi untuk mengatur jadwal jam kerja untuk dokter dan perawat.
 
 ### NAMA ANGGOTA:
 <hr>
