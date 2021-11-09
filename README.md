@@ -1,4 +1,4 @@
-### ALPHANCODERS_PERGANTIAN-JAM-KERJA-DI-RUMAH-SAKIT 
+### ALPHANCODERS TEAM 
 <hr>
 
 Repositori ini berisi tentang projek yang dikerjakan oleh ALPHANCODERS TEAM (Kelompok 1).
