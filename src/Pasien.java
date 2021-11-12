@@ -1,2 +1,7 @@
-public class Pasien {
+/**
+ * 
+ * @author Alphancoders
+ */
+public class Pasien 
+{
 }

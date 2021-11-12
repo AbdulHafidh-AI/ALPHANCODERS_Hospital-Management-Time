@@ -1,2 +1,7 @@
-public class Perawat {
+/**
+ * 
+ * @author Alphancoders
+ */
+public class Perawat
+{
 }

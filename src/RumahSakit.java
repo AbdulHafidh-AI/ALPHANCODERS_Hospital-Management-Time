@@ -1,2 +1,7 @@
-public class RumahSakit {
+/**
+ * 
+ * @author Alphancoders
+ */
+abstract class RumahSakit 
+{
 }

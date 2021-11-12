@@ -2,6 +2,7 @@
  * 
  * @author Alphancoders
  */
-public class Dokter 
+public class Pegawai 
 {
+    
 }
