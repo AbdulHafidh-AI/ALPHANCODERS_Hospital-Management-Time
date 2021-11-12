@@ -1,10 +1,14 @@
 ### ALPHANCODERS TEAM 
 <hr>
-
 Repositori ini berisi tentang projek yang dikerjakan oleh ALPHANCODERS TEAM (Kelompok 1).
 Pada projek ini kami akan membuat suatu Aplikasi tentang suatu permasalahan pada jam kerja di rumah sakit.
 Jadi dengan Aplikasi ini kami bisa membantu para administrasi untuk mengatur jadwal jam kerja untuk dokter dan perawat.
 
+### KENAPA KAMI MEMBUAT APLIKASI INI???
+Kami membuat aplikasi ini untuk mengatur jadwal jam kerja untuk dokter, perawat, dan pegawai di rumah sakit. Dan disini 
+cara kami membagi shift kerjanya dengan cara membagi setengah kouta dari masing2 profesi. Namun ada suatu kondisi yang dimana jika pada hari itu
+terdapat lebih dari 40 pasien maka kami akan memberikan informasi kepada dokter dan perawat bahwa mereka harus 
+bekerja dari pagi sampai malam pada hari. Khusus pegawai mereka tetap bekerja seperti biasanya.
 ### NAMA ANGGOTA:
 <hr>
 <ul>
