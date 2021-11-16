@@ -43,7 +43,7 @@ public class Akun {
         StringTokenizer stringTokenizer = new StringTokenizer(data,",");
         // Membaca sampai akhir dari file database
         while (data != null){
-            stringTokenizer = new StringTokenizer(data, "");
+            stringTokenizer = new StringTokenizer(data, ",");
             // Menemukan pin berdasarkan id yang ditentukan
             if(id.equals(stringTokenizer.nextToken())){
                 // Mendapatkan pin
