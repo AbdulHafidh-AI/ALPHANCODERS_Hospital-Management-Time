@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
  * @author Alphancoders
  * @version 2021.16.11
  */
-public class Pekerja
+abstract class Pekerja
 {
     // Fields
     private String nama;

@@ -2,6 +2,6 @@
  * 
  * @author Alphancoders
  */
-abstract class RumahSakit 
+public class RumahSakit 
 {
 }
