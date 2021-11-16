@@ -8,8 +8,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-
-public class RegAcc {
+/**
+ * Sebuah class untuk melakukan registrasi sebelum login ke aplikasi utama
+ */
+public class RegAcc
+{
     static Scanner name = new Scanner(System.in);
     static Scanner address = new Scanner(System.in);
     static Scanner in = new Scanner(System.in);
@@ -17,7 +20,11 @@ public class RegAcc {
     static int random = (int) (Math.random() * (1000000 - 100000)) + 100000;
     // convert dia ke string karena data bilangan ini akan di simpan di file database beresktensi .txt
     static String id = Integer.toString(random);
-
+    /**
+     * Sebuah method yang bertujuan untuk menambahkan akun
+     * @param data
+     * @throws IOException
+     */
     private static void tambahAkun(ArrayList<String> data) throws IOException
     {
         // Memanggil method constructor tanpa disertai parameter
@@ -32,7 +39,11 @@ public class RegAcc {
         // Wajib tutup
         bufferedWriter.close();
     }
-
+    /**
+     * Sebuah method yang bertujuan untuk menghapus akun 
+     * @param id
+     * @throws IOException
+     */
     private static void hapusAkun(String id) throws IOException
     {
         // Open database original terlebih dahulu
@@ -72,7 +83,12 @@ public class RegAcc {
         temp.renameTo(file);
     }
 
-    // Method untuk mengecek id
+    /**
+     * Sebuah method yang bertujuan untuk mengecek apakah id itu wujud atau tidak wujud
+     * @param id
+     * @return
+     * @throws IOException
+     */
     private static boolean checkID(String id) throws IOException
     {
         boolean dataWujud = true;
@@ -99,6 +115,11 @@ public class RegAcc {
         bufferedReader.close();
         return dataWujud;
     }
+    /**
+     * Sebuah method yang akan mengeluarkan output
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception
     {
         String pilihan;

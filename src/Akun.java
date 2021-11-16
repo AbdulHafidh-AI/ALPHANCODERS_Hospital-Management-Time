@@ -5,19 +5,27 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.StringTokenizer;
-
+/**
+ * Sebuah class yang akan dibuat untuk class Pekerja yang dimana teknik composition dapat diciptakan
+ */
 public class Akun {
     // Fields
     private String id;
     private int pin;
 
-    // Method constructor dengan pin bawaan
+    /**
+     * Sebuah method constructor dengan pin bawaan nya itu 5555
+     */
     public Akun()
     {
         this.pin = 5555;
     }
 
-    // Method constructor dengan parameter id sesuai dengan keinginian pendafatar
+    /**
+     * Sebuah Method constructor dengan parameter yang dimana pin nya itu didapatkan dari sistem
+     * @param id
+     * @throws IOException
+     */
     public Akun(String id) throws IOException
     {
         this.id = id;
@@ -26,13 +34,21 @@ public class Akun {
 
     }
 
-    // Method mendaptkan pin
+    /**
+     * Sebuah method untuk mendapatkan pin
+     * @return this.pin
+     */
     public int getPin()
     {
         return this.pin;
     }
 
-    // Method untuk mendapatkan pin di database
+    /**
+     * Sebuah method untuk mendapatkan pin dari Database
+     * @param id
+     * @return
+     * @throws IOException
+     */
     public int getPin(String id) throws IOException
     {
         FileReader fileReader = new FileReader("Database.txt");
@@ -60,7 +76,11 @@ public class Akun {
         return this.pin;
     }
 
-    // Mengubah pin pada akun dari file database
+    /**
+     * Sebuah method untuk Mengubah pin pada akun dari file database
+     * @param newPin
+     * @throws IOException
+     */
     public void setPin(int newPin) throws IOException
     {
         // Membuka file database
@@ -112,6 +132,4 @@ public class Akun {
         // Karena database yang lama itu sudah di delete maka kita harus merenamenya seperti yang sebelum di delete tadi untuk database temp ini
         temp.renameTo(file);
     }
-
-
 }

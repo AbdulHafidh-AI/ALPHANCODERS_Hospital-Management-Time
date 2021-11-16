@@ -1,15 +1,15 @@
-/**
- * Sebuah class untuk mendapatkan informasi dari pekerja rumah sakit (dokter, perawat, dan pegawai)
- * @author Alphancoders
- * @version 2021.16.11
- */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
-
-public class Pekerja {
+/**
+ * Sebuah class untuk mendapatkan informasi dari pekerja rumah sakit (dokter, perawat, dan pegawai)
+ * @author Alphancoders
+ * @version 2021.16.11
+ */
+public class Pekerja
+{
     // Fields
     private String nama;
     private String id;
@@ -36,26 +36,41 @@ public class Pekerja {
         // Using composition technique
         workers = new Akun(id);
     }
-    // get id workers;
+    /**
+     * Sebuah Method untuk mendapatkan id 
+     * @return
+     */
     public String getId()
     {
         return this.id;
     }
 
-    // Mengubah pin workers, dan juga merubahnya pada class Akun
+    /**
+     * Sebuah Method untuk Mengubah pin workers, dan juga merubahnya pada class Akun
+     * @param pin
+     * @throws IOException
+     */
     public void setPin(int pin) throws IOException
     {
         // Mengubah pin
         workers.setPin(pin);
     }
 
-    // Mendapatkan pin
+    /**
+     * Sebuah method untuk mendapatkan pin
+     * @return
+     * @throws IOException
+     */
     public int getPin() throws IOException
     {
         return workers.getPin(id);
     }
 
-    // Mendapatkan nama workers
+    /**
+     * Sebuah method untuk mendapatkan nama dari pekerja
+     * @return
+     * @throws IOException
+     */
     public String getNama() throws IOException
     {
         FileReader fileReader = new FileReader("Database.txt");
