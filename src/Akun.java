@@ -1,11 +1,11 @@
 import java.io.IOException;
-
 /**
  * Sebuah class abstract untuk membantu menjadikan method yang ditimpanya menjadi tipe data (composition)
  * @author Alphancoders
  * @version 2021.11.17
  */
-abstract class Akun {
+abstract class Akun
+{
 
     // Fields
     private int pin;

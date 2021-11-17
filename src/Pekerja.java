@@ -8,41 +8,51 @@ abstract class Pekerja
 {
     // Fields
     private String id;
-    private Akun workers;
-
+    /**
+     * Sebuah method constructor tanpa adanya parameter
+     * @throws IOException
+     */
     public Pekerja() throws IOException
     {
     
     }
-
-    // Method constructor
+    /**
+     * Sebuah method constructor dengan adanya parameter
+     * @param id
+     * @throws Exception
+     */
     public Pekerja(String id) throws Exception
     {
         this.id = id;
-
-        // Using composition technique
-       
     }
-    // get id workers;
+    /**
+     * Sebuah method untuk mendapatkan ID
+     * @return this.id
+     */
     public String getId()
     {
         return this.id;
     }
 
-    // Mengubah pin workers, dan juga merubahnya pada class Akun
-    public void setPin(int pin) throws IOException
-    {
-        // Mengubah pin
-        workers.setPin(pin);
-    }
-
-    // Mendapatkan pin
-    public int getPin() throws IOException
-    {
-        return workers.getPin(id);
-    }
-
-    // Mendapatkan nama workers 
+    /**
+     * Sebuah method abstract untuk mengeset nilai pin
+     * @param pin
+     * @throws IOException
+     */
+    public abstract void setPin(int pin) throws IOException;
+    
+    /**
+     * Sebuah method abstract untuk mendapatkan nilai pin
+     * @return
+     * @throws IOException
+     */
+    public abstract int getPin() throws IOException;
+   
+    /**
+     * Sebuah method abstract untuk mendapatkan nilai dari nama
+     * @return
+     * @throws IOException
+     */
     public abstract String getNama() throws IOException;
    
     
