@@ -7,11 +7,15 @@ public class RumahSakit
      //Field
      private String nama;
      private String kota;
+     private String namaPemilik;
+     private String namaNegara;
      /**
       * method constructor di class RumahSakit
       */
      public RumahSakit()
      {
+          this.namaPemilik = "Alphan";
+          this.namaNegara = "Indonesia";
           this.nama = "Alphan Hospital";
      }
      /**
