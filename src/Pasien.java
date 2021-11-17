@@ -38,7 +38,7 @@ public class Pasien
             this.jamKerjaMinimal = 12;
         }
         else {
-        
+            System.out.println("Jumlah Pasien tidak valid!");
         }
     }
 
