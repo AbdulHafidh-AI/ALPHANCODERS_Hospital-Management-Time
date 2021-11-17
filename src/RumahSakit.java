@@ -1,6 +1,7 @@
 /**
- * 
+ * sebuah class untuk mendapatkan informasi dari rumah sakit
  * @author Alphancoders
+ * @version 2021.11.17
  */
 public class RumahSakit 
 {
@@ -33,5 +34,29 @@ public class RumahSakit
      public String getKota()
      {
           return this.kota;
+     }
+     /**
+      * sebuah method accessor untuk mendapatkan nilai nama
+      * @return this.nama
+      */
+     public String getnama()
+     {
+          return this.nama;
+     }
+     /**
+      * sebuah method accessor untuk mendapatkan nilai nama negara
+      * @return this.namaNegara
+      */
+     public String getNamaNegara()
+     {
+          return this.namaNegara;
+     }
+     /**
+      * sebuah method accessor untuk mendapatkan nilai nama pemilik
+      * @return this.namaPemilik
+      */
+     public String getNamaPemilik()
+     {
+          return this.namaPemilik;
      }
 }
