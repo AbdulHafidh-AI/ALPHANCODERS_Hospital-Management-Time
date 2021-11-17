@@ -1,44 +1,33 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.StringTokenizer;
-
 /**
- * Sebuah class untuk mendapatkan informasi dari pekerja rumah sakit (dokter, perawat, dan pegawai)
+ *  Sebuah class abstract untuk membantu menjadikan method yang ditimpanya olehnya menjadi tipe data (composition)
  * @author Alphancoders
- * @version 2021.16.11
+ * @version 2021.11.17
  */
 abstract class Pekerja
 {
     // Fields
-    private String nama;
     private String id;
-    private Akun workers;
-
-
     /**
-     * Sebuah method constructor tanpa adanya paramaeter
+     * Sebuah method constructor tanpa adanya parameter
+     * @throws IOException
      */
-    public Pekerja()
+    public Pekerja() throws IOException
     {
-
+    
     }
-
     /**
-     * Sebuah Method constructor dengan parameter 
+     * Sebuah method constructor dengan adanya parameter
      * @param id
      * @throws Exception
      */
     public Pekerja(String id) throws Exception
     {
         this.id = id;
-
-        // Using composition technique
-        workers = new Akun(id);
     }
     /**
-     * Sebuah Method untuk mendapatkan id 
-     * @return
+     * Sebuah method untuk mendapatkan ID
+     * @return this.id
      */
     public String getId()
     {
@@ -46,56 +35,25 @@ abstract class Pekerja
     }
 
     /**
-     * Sebuah Method untuk Mengubah pin workers, dan juga merubahnya pada class Akun
+     * Sebuah method abstract untuk mengeset nilai pin
      * @param pin
      * @throws IOException
      */
-    public void setPin(int pin) throws IOException
-    {
-        // Mengubah pin
-        workers.setPin(pin);
-    }
-
+    public abstract void setPin(int pin) throws IOException;
+    
     /**
-     * Sebuah method untuk mendapatkan pin
+     * Sebuah method abstract untuk mendapatkan nilai pin
      * @return
      * @throws IOException
      */
-    public int getPin() throws IOException
-    {
-        return workers.getPin(id);
-    }
-
+    public abstract int getPin() throws IOException;
+   
     /**
-     * Sebuah method untuk mendapatkan nama dari pekerja
+     * Sebuah method abstract untuk mendapatkan nilai dari nama
      * @return
      * @throws IOException
      */
-    public String getNama() throws IOException
-    {
-        FileReader fileReader = new FileReader("Database.txt");
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-        // Membaca untuk satu baris
-        String data = bufferedReader.readLine();
-        // Mengambil data yang dipisahkan dengan koma dengan memakai fungsi delimiter
-        StringTokenizer stringTokenizer = new StringTokenizer(data,",");
-        // Membaca keseluruhan file
-        while (data != null){
-            stringTokenizer = new StringTokenizer(data, ",");
-            // Move to ID
-            if(id.equals(stringTokenizer.nextToken())){
-                // Pindah pin
-                stringTokenizer.nextToken();
-                // Setelah dipindah didapatkan nama
-                this.nama = stringTokenizer.nextToken();
-                break;
-            }else{
-                // Membaca baris selanjutnya jika baris pertama tidak ada yg memenuhi syarat yang diminta
-                data = bufferedReader.readLine();
-            }
-        }
-        bufferedReader.close();
-        return this.nama;
-    }
-
+    public abstract String getNama() throws IOException;
+   
+    
 }
