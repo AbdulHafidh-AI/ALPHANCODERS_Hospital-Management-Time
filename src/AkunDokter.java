@@ -5,7 +5,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.StringTokenizer;
-
+/**
+ * Sebuah class yang merupakan anak dari class Akun
+ * 
+ * @author Alphancoders
+ * @version 2021.11.18
+ */
 public class AkunDokter extends Akun
 {
 
@@ -14,12 +19,19 @@ public class AkunDokter extends Akun
     private String id;
 
 
-
+    /**
+    * Sebuah method constructor
+    */
     public AkunDokter()
     {
 
     }
-
+    /**
+     * Membuat Method Constructor dengan parameter
+     * 
+     * @param id
+     * @throws IOException
+     */
     public AkunDokter(String id) throws IOException
     {
         this.id = id;
@@ -27,7 +39,12 @@ public class AkunDokter extends Akun
         this.pin = getPin(id);
     }
 
-    // Method untuk mendapatkan pin di database
+    /**
+     * Sebuah method getter yang bertujuan untuk mendapatkan nilai Pin
+     * 
+     * @param id
+     * @throws IOException
+     */
     @Override
     public int getPin(String id) throws IOException
     {
@@ -56,7 +73,12 @@ public class AkunDokter extends Akun
         return this.pin;
     }
 
-    // Mengubah pin pada akun dari file database
+    /**
+     * Sebuah method setter untuk mengset Pin ke file database
+     * 
+     * @param newPin
+     * @throws IOException
+     */
     @Override
     public void setPin(int newPin) throws IOException
     {
@@ -66,7 +88,7 @@ public class AkunDokter extends Akun
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         // Membuat file DatabaseTemp
-        File temp = new File("DatabaseDokterTemp.txt");
+        File temp = new File("TempDatabaseDokter.txt");
         FileWriter fileWriter = new FileWriter(temp);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
