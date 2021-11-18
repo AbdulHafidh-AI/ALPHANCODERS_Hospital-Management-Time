@@ -1,52 +1,62 @@
 /**
- * 
+ * Sebuah class pada pasien yang bertujuan untuk menentukan jadwal kerja pada dokter dan perawat berdasarkan jumlah pasien
  * @author Alphancoders
+ * @version 2021.11.17
  */
 public class Pasien 
 {
     private int jumlahPasien;
     private int jamKerjaMinimal;
+    private int jadwal;
 
+    /**
+     * Sebuah method constructor pada class Pasien dengan mengeset nilai pada jumlahPasien secara random
+     */
     public Pasien(){
-
+        // Mendapatkan nilai dari jumlah pasien secara random
+        this.jumlahPasien = (int) (1 + Math.random() * (100 - 1));
     }
 
     /**
-     * Untuk menentukan jumlah pasien agar mudah mengatur jadwal
-     * @param jumlahPasien dari hasil random
+     * Sebuah method accessor untuk mendapatkan jadwal kerja sesuai jumlah pasien
+     * @return this.jamKerjaMinimal
      */
-    public void setJumlahPasien(int jumlahPasien){
-        this.jumlahPasien = jumlahPasien;
-    }
-
-    /**
-     * Untuk menentukan jumlah jam kerja minimal perhari berdasarkan jumlah pasien
-     */
-    public void setJamKerjaMinimal(){
-
-
-        if (this.jumlahPasien > 0 && this.jumlahPasien < 30) {
+    public int getJamKerjaMinimal()
+    {
+        if (this.jumlahPasien > 0 && this.jumlahPasien < 30){
             this.jamKerjaMinimal = 3;
         }
-        else if (this.jumlahPasien >= 30 && this.jumlahPasien < 50) {
+        else if (this.jumlahPasien >= 30 && this.jumlahPasien < 50){
             this.jamKerjaMinimal = 5;
         }
-        else if (this.jumlahPasien >= 50 && this.jumlahPasien < 80) {
+        else if (this.jumlahPasien >= 50 && this.jumlahPasien < 80){
             this.jamKerjaMinimal = 8;
         }
-        else if (this.jumlahPasien >= 50 && this.jumlahPasien <= 100) {
+        else{
             this.jamKerjaMinimal = 12;
         }
-        else {
-            System.out.println("Jumlah Pasien tidak valid!");
-        }
+        return this.jamKerjaMinimal;
     }
 
     /**
-     * 
-     * @return jumlah jam kerja minimal
+     * Sebuah method untuk memilih jadwal sesuai yang diinginkan
+     * @param jadwal
      */
-    public int getJamKerjaMinimal(){
-        return this.jamKerjaMinimal;
+    public void setJadwal(int jadwal)
+    {
+        this.jadwal = jadwal;
     }
+
+    /**
+     * Sebuah method untuk mendapatkan variabel dari nilai jadwal
+     * @return this.jadwal
+     */
+    public int getJadwal()
+    {
+        return this.jadwal;
+    }
+
+    
+
+    
 }
