@@ -81,7 +81,7 @@ public class AkunPerawat extends Akun
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         // Membuat file DatabaseTemp
-        File temp = new File("DatabasePerawatTemp.txt");
+        File temp = new File("TempDatabasePerawat.txt");
         FileWriter fileWriter = new FileWriter(temp);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
