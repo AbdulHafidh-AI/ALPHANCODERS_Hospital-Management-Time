@@ -54,9 +54,5 @@ public class Pasien
     public int getJadwal()
     {
         return this.jadwal;
-    }
-
-    
-
-    
+    }  
 }
