@@ -7,9 +7,6 @@ import java.util.StringTokenizer;
  * @author Alphancoders
  * @version 2021.18.11
  */
-/**
- * 
- */
 public class Perawat extends Pekerja
 {
 
