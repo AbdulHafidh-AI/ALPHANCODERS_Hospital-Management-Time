@@ -1,13 +1,17 @@
-/**
- * 
- * @author Alphancoders
- */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
-
-public class Perawat extends Pekerja{
+/**
+ * Sebuah class yang bertujuan untuk bisa login di class utama yang kerjaanya sebagai perawat
+ * @author Alphancoders
+ * @version 2021.18.11
+ */
+/**
+ * 
+ */
+public class Perawat extends Pekerja
+{
 
     /**
      * Atrribute from Perawat class
@@ -21,26 +25,28 @@ public class Perawat extends Pekerja{
      * Perawat constructor
      * @throws IOException
      */
-    public Perawat()throws IOException{
-
+    public Perawat()throws IOException
+    {
+        // Composition Method
      perawat = new AkunPerawat();
 
     }
 
     /**
-     * Perawat constructor
+     * Sebuah method constructor pada kelas ini
      * @param id
      * @throws IOException
      */
     public Perawat(String id) throws IOException{
      
      this.id = id;
+     // Composition Method
      perawat = new AkunPerawat(id);
 
     }
 
     /**
-     * getId method
+     * Sebuah method getter untuk mendaptkan id
      */
     public String getId(){
 
@@ -49,34 +55,36 @@ public class Perawat extends Pekerja{
     }
 
     /**
-     * setPin method
+     * setPin method yang ditimpa dari class pekerja untuk mengeset pin
      * @param pin
      * @throws IOException
      */
     @Override
-    public void setPin(int pin) throws IOException {
+    public void setPin(int pin) throws IOException 
+    {
 
         perawat.setPin(pin);
-
     }
 
     /**
-     * getPin method
+     * Sebuah method untuk mendaptkan pin yang ditimpa dari class Pekerja
      * @throws IOException
      */
     @Override
-    public int getPin() throws IOException {
+    public int getPin() throws IOException
+    {
         
         return perawat.getPin(id);
 
     }
 
     /**
-     * getNama method
+     * Sebuah method getter untuk mendapatkan nama dari si pendaftar
      * @throws IOException
      */
     @Override
-    public String getNama() throws IOException {
+    public String getNama() throws IOException
+    {
         
         FileReader fileReader = new FileReader("DatabasePerawat.txt");
         BufferedReader bufferedReader = new BufferedReader(fileReader);
