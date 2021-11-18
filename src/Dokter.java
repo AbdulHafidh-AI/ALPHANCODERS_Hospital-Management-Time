@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 /**
- * sebuah class yang merupakan anak dari class Pekerja
+ * Sebuah class yang merupakan anak dari class Pekerja
  * 
  * @author Alphancoders
- * @version 2021.11.17
+ * @version 2021.11.18
  */
 public class Dokter extends Pekerja 
 {
@@ -18,7 +18,7 @@ public class Dokter extends Pekerja
     private AkunDokter dokter;
 
     /**
-     * sebuah method constructor
+     * Sebuah method constructor
      * 
      * @throws IOException
      */
@@ -29,7 +29,7 @@ public class Dokter extends Pekerja
     }
 
     /**
-     * sebuah Method constructor dengan parameter
+     * Sebuah method constructor dengan parameter
      * 
      * @param id
      * @throws IOException
@@ -51,7 +51,7 @@ public class Dokter extends Pekerja
     }
 
     /**
-     * sebuah method getter yang bertujuan untuk mendapakan pin untuk dokter
+     * Sebuah method getter yang bertujuan untuk mendapakan pin untuk dokter
      */
     @Override
     public int getPin() throws IOException 
@@ -60,7 +60,7 @@ public class Dokter extends Pekerja
     }
 
     /**
-     * sebuah method getter untuk mendapatkan nama
+     * Sebuah method getter untuk mendapatkan nama
      * 
      * @return this.nama
      */
