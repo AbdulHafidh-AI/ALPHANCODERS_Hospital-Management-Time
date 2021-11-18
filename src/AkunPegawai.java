@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 /**
  * Sebuah class yang merupakan anak dari class Akun
- * 
  * @author Alphancoders
  * @version 2021.11.18
  */
@@ -41,7 +40,6 @@ public class AkunPegawai extends Akun
 
     /**
      * Sebuah method getter yang bertujuan untuk mendapatkan nilai Pin
-     * 
      * @param id
      * @throws IOException
      */
@@ -75,12 +73,11 @@ public class AkunPegawai extends Akun
 
     /**
      * Sebuah method setter untuk mengset Pin ke file database
-     * 
-     * @param newPin
+     * @param pinBaru
      * @throws IOException
      */
     @Override
-    public void setPin(int newPin) throws IOException
+    public void setPin(int pinBaru) throws IOException
     {
         // Membuka file database 
         File file = new File("DatabasePegawai.txt");
@@ -111,7 +108,7 @@ public class AkunPegawai extends Akun
                 // receive address
                 String alamat = stringTokenizer.nextToken();
                 // copy ke databaseTemp
-                bufferedWriter.write(id + "," + Integer.toString(newPin) + "," + nama + "," + jk + "," + alamat);
+                bufferedWriter.write(id + "," + Integer.toString(pinBaru) + "," + nama + "," + jk + "," + alamat);
             }else{
                 // Copy ke databaseTemp
                 bufferedWriter.write(data);

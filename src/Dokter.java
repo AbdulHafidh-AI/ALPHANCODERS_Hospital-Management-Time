@@ -5,7 +5,6 @@ import java.util.StringTokenizer;
 
 /**
  * Sebuah class yang merupakan anak dari class Pekerja
- * 
  * @author Alphancoders
  * @version 2021.11.18
  */
@@ -18,8 +17,7 @@ public class Dokter extends Pekerja
     private AkunDokter dokter;
 
     /**
-     * Sebuah method constructor
-     * 
+     * Sebuah method constructor pada class ini
      * @throws IOException
      */
     public Dokter() throws IOException 
@@ -43,6 +41,7 @@ public class Dokter extends Pekerja
 
     /**
      * Sebuah method setter yang ditimpa dari class Pekerja
+     * @param pin
      */
     @Override
     public void setPin(int pin) throws IOException 
@@ -52,6 +51,7 @@ public class Dokter extends Pekerja
 
     /**
      * Sebuah method getter yang bertujuan untuk mendapakan pin untuk dokter
+     * @return dokter.getPin(id)
      */
     @Override
     public int getPin() throws IOException 
@@ -61,7 +61,6 @@ public class Dokter extends Pekerja
 
     /**
      * Sebuah method getter untuk mendapatkan nama
-     * 
      * @return this.nama
      */
     @Override

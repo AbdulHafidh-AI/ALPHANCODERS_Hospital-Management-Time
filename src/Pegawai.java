@@ -3,11 +3,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
 /**
- * 
+ * Sebuah class turunan dari pekerja
  * @author Alphancoders
  * @version 2021.11.18
  */
-public class Pegawai 
+public class Pegawai extends Pekerja
 {
     // Fields
     private String nama;
@@ -15,13 +15,12 @@ public class Pegawai
     private AkunPegawai pegawai;
 
     /**
-     * Sebuah method constructor
-     * 
+     * Sebuah method constructor pada kelas ini
      * @throws IOException
      */
     public Pegawai() throws IOException 
     {
-        // Composition merupakan karakteristik OOP
+        // Composition Method
         pegawai = new AkunPegawai();
     }
 
@@ -40,6 +39,7 @@ public class Pegawai
 
     /**
      * Sebuah method setter yang ditimpa dari class Pekerja
+     * @param pin
      */
     @Override
     public void setPin(int pin) throws IOException 
@@ -49,6 +49,7 @@ public class Pegawai
 
     /**
      * Sebuah method getter yang bertujuan untuk mendapakan pin untuk dokter
+     * @return pegawai.getPin(id)
      */
     @Override
     public int getPin() throws IOException 
@@ -58,7 +59,6 @@ public class Pegawai
 
     /**
      * Sebuah method getter untuk mendapatkan nama
-     * 
      * @return this.nama
      */
     @Override
