@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -22,6 +23,10 @@ public class RegPekerjaHospital
     static int random = (int) (Math.random() * (1000000 - 100000)) + 100000;
     // convert dia ke string karena data bilangan ini akan di simpan di file database beresktensi .txt
     static String id = Integer.toString(random);
+    private JPanel Registrasi;
+    private JButton dokterButton;
+    private JButton perawatButton;
+    private JButton pegawaiButton;
 
     private static void tambahAkunDokter(ArrayList<String> data) throws IOException
     {
