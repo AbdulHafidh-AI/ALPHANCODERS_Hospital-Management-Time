@@ -1,3 +1,5 @@
+package Projek.CLASS;
+
 /**
  * Sebuah class pada pasien yang bertujuan untuk menentukan jadwal kerja pada dokter dan perawat berdasarkan jumlah pasien
  * @author Alphancoders

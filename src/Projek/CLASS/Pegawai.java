@@ -1,29 +1,30 @@
+package Projek.CLASS;
+
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
-
 /**
- * Sebuah class yang merupakan anak dari class Pekerja
+ * Sebuah class turunan dari pekerja
  * @author Alphancoders
  * @version 2021.11.18
  */
-public class Dokter extends Pekerja 
+public class Pegawai extends Pekerja
 {
-
     // Fields
     private String nama;
     private String id;
-    private AkunDokter dokter;
+    private AkunPegawai pegawai;
 
     /**
-     * Sebuah method constructor pada class ini
+     * Sebuah method constructor pada kelas ini
      * @throws IOException
      */
-    public Dokter() throws IOException 
+    public Pegawai() throws IOException 
     {
-        // Composition merupakan karakteristik OOP
-        dokter = new AkunDokter();
+        // Composition Method
+        pegawai = new AkunPegawai();
     }
 
     /**
@@ -32,11 +33,11 @@ public class Dokter extends Pekerja
      * @param id
      * @throws IOException
      */
-    public Dokter(String id) throws IOException 
+    public Pegawai(String id) throws IOException 
     {
         this.id = id;
         // Menggunakan teknik komposisi
-        dokter = new AkunDokter(id);
+        pegawai = new AkunPegawai(id);
     }
 
     /**
@@ -46,17 +47,17 @@ public class Dokter extends Pekerja
     @Override
     public void setPin(int pin) throws IOException 
     {
-        dokter.setPin(pin);
+        pegawai.setPin(pin);
     }
 
     /**
      * Sebuah method getter yang bertujuan untuk mendapakan pin untuk dokter
-     * @return dokter.getPin(id)
+     * @return pegawai.getPin(id)
      */
     @Override
     public int getPin() throws IOException 
     {
-        return dokter.getPin(id);
+        return pegawai.getPin(id);
     }
 
     /**
@@ -66,7 +67,7 @@ public class Dokter extends Pekerja
     @Override
     public String getNama() throws IOException 
     {
-        FileReader fileReader = new FileReader("DatabaseDokter.txt");
+        FileReader fileReader = new FileReader("DatabasePegawai.txt");
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         // Membaca untuk satu baris
         String data = bufferedReader.readLine();
@@ -91,4 +92,5 @@ public class Dokter extends Pekerja
         bufferedReader.close();
         return this.nama;
     }
+
 }

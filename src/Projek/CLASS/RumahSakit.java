@@ -1,3 +1,5 @@
+package Projek.CLASS;
+
 /**
  * sebuah class untuk mendapatkan informasi dari rumah sakit
  * @author Alphancoders
