@@ -1,3 +1,7 @@
+package Projek.CLASS;
+
+
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -6,30 +10,33 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.StringTokenizer;
 /**
- * Sebuah class untuk mendapatkan pin dan id untuk perawat
+ * Sebuah class yang merupakan anak dari class Akun
+ * 
  * @author Alphancoders
- * @version 2021.18.11
+ * @version 2021.11.18
  */
-public class AkunPerawat extends Akun
+public class AkunDokter extends Akun
 {
 
     // Fields 
     private int pin;
     private String id;
 
+
     /**
-     * Method constructor pada kelas ini tanpa disertai parameter
-     */
-    public AkunPerawat()
+    * Sebuah method constructor
+    */
+    public AkunDokter()
     {
-        
+
     }
     /**
-     * Sebuah Method constructor pada kelas ini dengan disertai parameter
+     * Membuat Method Constructor dengan parameter
+     * 
      * @param id
      * @throws IOException
      */
-    public AkunPerawat(String id) throws IOException
+    public AkunDokter(String id) throws IOException
     {
         this.id = id;
         // Mendapatkan pin dari database
@@ -37,13 +44,15 @@ public class AkunPerawat extends Akun
     }
 
     /**
-     * Sebuah method getter untuk mendapatkan pin dari database
-     * @return this.pin
+     * Sebuah method getter yang bertujuan untuk mendapatkan nilai Pin
+     * 
+     * @param id
+     * @throws IOException
      */
     @Override
     public int getPin(String id) throws IOException
     {
-        FileReader fileReader = new FileReader("DatabasePerawat.txt");
+        FileReader fileReader = new FileReader("DatabaseDokter.txt");
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         // Membaca satu baris saja
         String data = bufferedReader.readLine();
@@ -69,19 +78,21 @@ public class AkunPerawat extends Akun
     }
 
     /**
-     * Sebuah method untuk mengeset pin di database
-     * @param pinBaru
+     * Sebuah method setter untuk mengset Pin ke file database
+     * 
+     * @param newPin
+     * @throws IOException
      */
     @Override
-    public void setPin(int pinBaru) throws IOException
+    public void setPin(int newPin) throws IOException
     {
         // Membuka file database 
-        File file = new File("DatabasePerawat.txt");
+        File file = new File("DatabaseDokter.txt");
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         // Membuat file DatabaseTemp
-        File temp = new File("TempDatabasePerawat.txt");
+        File temp = new File("TempDatabaseDokter.txt");
         FileWriter fileWriter = new FileWriter(temp);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
@@ -104,7 +115,7 @@ public class AkunPerawat extends Akun
                 // receive address
                 String alamat = stringTokenizer.nextToken();
                 // copy ke databaseTemp
-                bufferedWriter.write(id + "," + Integer.toString(pinBaru) + "," + nama + "," + jk + "," + alamat);
+                bufferedWriter.write(id + "," + Integer.toString(newPin) + "," + nama + "," + jk + "," + alamat);
             }else{
                 // Copy ke databaseTemp
                 bufferedWriter.write(data);
@@ -124,5 +135,4 @@ public class AkunPerawat extends Akun
         // Karena database yang lama itu sudah di delete maka kita harus merenamenya seperti yang sebelum di delete tadi untuk database temp ini
         temp.renameTo(file);
     }
-
 }

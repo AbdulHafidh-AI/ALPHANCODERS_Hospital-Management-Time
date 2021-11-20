@@ -1,3 +1,5 @@
+package Projek.CLASS;
+
 /**
  * Sebuah class untuk memilih dalam registrasi profesi di Rumah Sakit Alphan
  * @author Alphancoders

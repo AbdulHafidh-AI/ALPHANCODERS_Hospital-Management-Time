@@ -1,3 +1,5 @@
+package Projek.CLASS;
+
 /**
  * Sebuah class pada pasien yang bertujuan untuk menentukan jadwal kerja pada dokter dan perawat berdasarkan jumlah pasien
  * @author Alphancoders
@@ -54,5 +56,23 @@ public class Pasien
     public int getJadwal()
     {
         return this.jadwal;
-    }  
+    }
+    /**
+     * Sebuah method toString yang bertujuan untuk memberikan informasi terkait jam kerja
+     * @return pernyataan
+     */
+    public String toString()
+    {
+        String pernyataan = "Null";
+        if(this.jamKerjaMinimal == 3){
+            pernyataan = "JAM KERJA ANDA MINIMAL 3 JAM";
+        }else if(this.jamKerjaMinimal == 5){
+            pernyataan = "JAM KERJA ANDA MINIMAL 5 JAM";
+        }else if(this.jamKerjaMinimal == 8){
+            pernyataan = "JAM KERJA ANDA MINIMAL 8 JAM";
+        }else{
+            pernyataan = "JAM KERJA ANDA MINIMAL 12 JAM";
+        }
+        return pernyataan;
+    }
 }
