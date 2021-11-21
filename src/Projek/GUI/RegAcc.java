@@ -322,4 +322,12 @@ public class RegAcc
         bufferedReader.close();
         return dataWujud;
     }
+
+    /**
+     * Sebuah method untuk mendapatkan hasil objek dari panel registrasi
+     * @return registrasi
+     */
+    public JPanel getPanel(){
+        return Registrasi;
+    }
 }
