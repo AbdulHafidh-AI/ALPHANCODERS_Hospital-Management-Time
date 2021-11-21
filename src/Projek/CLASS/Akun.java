@@ -6,7 +6,7 @@ import java.io.IOException;
  * @author Alphancoders
  * @version 2021.11.17
  */
-abstract class Akun
+public abstract class Akun
 {
 
     // Fields
