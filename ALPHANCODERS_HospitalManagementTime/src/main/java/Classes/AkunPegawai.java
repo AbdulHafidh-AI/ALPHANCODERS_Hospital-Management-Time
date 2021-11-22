@@ -1,4 +1,4 @@
-package Projek.CLASS;
+package Classes;
 
 
 
@@ -11,11 +11,10 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 /**
  * Sebuah class yang merupakan anak dari class Akun
- * 
  * @author Alphancoders
  * @version 2021.11.18
  */
-public class AkunDokter extends Akun
+public class AkunPegawai extends Akun
 {
 
     // Fields 
@@ -26,7 +25,7 @@ public class AkunDokter extends Akun
     /**
     * Sebuah method constructor
     */
-    public AkunDokter()
+    public AkunPegawai()
     {
 
     }
@@ -36,7 +35,7 @@ public class AkunDokter extends Akun
      * @param id
      * @throws IOException
      */
-    public AkunDokter(String id) throws IOException
+    public AkunPegawai(String id) throws IOException
     {
         this.id = id;
         // Mendapatkan pin dari database
@@ -45,14 +44,13 @@ public class AkunDokter extends Akun
 
     /**
      * Sebuah method getter yang bertujuan untuk mendapatkan nilai Pin
-     * 
      * @param id
      * @throws IOException
      */
     @Override
     public int getPin(String id) throws IOException
     {
-        FileReader fileReader = new FileReader("DatabaseDokter.txt");
+        FileReader fileReader = new FileReader("DatabasePegawai.txt");
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         // Membaca satu baris saja
         String data = bufferedReader.readLine();
@@ -79,20 +77,19 @@ public class AkunDokter extends Akun
 
     /**
      * Sebuah method setter untuk mengset Pin ke file database
-     * 
-     * @param newPin
+     * @param pinBaru
      * @throws IOException
      */
     @Override
-    public void setPin(int newPin) throws IOException
+    public void setPin(int pinBaru) throws IOException
     {
         // Membuka file database 
-        File file = new File("DatabaseDokter.txt");
+        File file = new File("DatabasePegawai.txt");
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         // Membuat file DatabaseTemp
-        File temp = new File("TempDatabaseDokter.txt");
+        File temp = new File("TempDatabasePegawai.txt");
         FileWriter fileWriter = new FileWriter(temp);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
@@ -115,7 +112,7 @@ public class AkunDokter extends Akun
                 // receive address
                 String alamat = stringTokenizer.nextToken();
                 // copy ke databaseTemp
-                bufferedWriter.write(id + "," + Integer.toString(newPin) + "," + nama + "," + jk + "," + alamat);
+                bufferedWriter.write(id + "," + Integer.toString(pinBaru) + "," + nama + "," + jk + "," + alamat);
             }else{
                 // Copy ke databaseTemp
                 bufferedWriter.write(data);

@@ -1,4 +1,4 @@
-package Projek.CLASS;
+package Classes;
 
 import java.io.IOException;
 /**

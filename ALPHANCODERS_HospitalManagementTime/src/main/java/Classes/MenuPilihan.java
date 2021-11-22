@@ -1,4 +1,4 @@
-package Projek.CLASS;
+package Classes;
 
 /**
  * Sebuah class untuk memilih dalam registrasi profesi di Rumah Sakit Alphan

@@ -1,4 +1,4 @@
-package Projek.CLASS;
+package Classes;
 
 /**
  * sebuah class untuk mendapatkan informasi dari rumah sakit

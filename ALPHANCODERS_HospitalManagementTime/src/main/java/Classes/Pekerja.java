@@ -1,5 +1,4 @@
-package Projek.CLASS;
-
+package Classes;
 import java.io.IOException;
 /**
  *  Sebuah class abstract untuk membantu menjadikan method yang ditimpanya olehnya menjadi tipe data (composition)
