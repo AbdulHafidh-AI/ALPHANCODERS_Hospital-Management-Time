@@ -47,6 +47,7 @@ public class SetRole extends javax.swing.JFrame {
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setMaximumSize(new java.awt.Dimension(700, 800));
         jPanel1.setLayout(null);
@@ -90,15 +91,15 @@ public class SetRole extends javax.swing.JFrame {
         jPanel1.add(ButtonPegawai);
         ButtonPegawai.setBounds(690, 380, 180, 30);
 
-        IconDokter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/ICON/Dokter.png"))); // NOI18N
+        IconDokter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Dokter.png"))); // NOI18N
         jPanel1.add(IconDokter);
         IconDokter.setBounds(220, 230, 180, 180);
 
-        IconPerawat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/ICON/Perawat.png"))); // NOI18N
+        IconPerawat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Perawat.png"))); // NOI18N
         jPanel1.add(IconPerawat);
         IconPerawat.setBounds(460, 240, 170, 150);
 
-        IconPegawai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/ICON/Pegawai.png"))); // NOI18N
+        IconPegawai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Pegawai.png"))); // NOI18N
         jPanel1.add(IconPegawai);
         IconPegawai.setBounds(700, 240, 160, 150);
 
@@ -108,7 +109,7 @@ public class SetRole extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(260, 130, 540, 60);
 
-        BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/Gambar/Blank.png"))); // NOI18N
+        BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Blank.png"))); // NOI18N
         jPanel1.add(BG);
         BG.setBounds(0, -10, 1067, 610);
 
