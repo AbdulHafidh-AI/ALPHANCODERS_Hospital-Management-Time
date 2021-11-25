@@ -26,21 +26,90 @@ public class SetRole extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        ButtonDokter = new javax.swing.JButton();
+        ButtonPerawat = new javax.swing.JButton();
+        ButtonPegawai = new javax.swing.JButton();
+        IconDokter = new javax.swing.JLabel();
+        IconPerawat = new javax.swing.JLabel();
+        IconPegawai = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        BG = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(700, 800));
+        jPanel1.setLayout(null);
+
+        ButtonDokter.setBackground(new java.awt.Color(153, 255, 255));
+        ButtonDokter.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ButtonDokter.setText("DOKTER");
+        ButtonDokter.setAlignmentY(0.0F);
+        ButtonDokter.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        ButtonDokter.setBorderPainted(false);
+        ButtonDokter.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        ButtonDokter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonDokterActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ButtonDokter);
+        ButtonDokter.setBounds(210, 379, 190, 30);
+
+        ButtonPerawat.setBackground(new java.awt.Color(153, 255, 255));
+        ButtonPerawat.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ButtonPerawat.setText("PERAWAT");
+        ButtonPerawat.setBorderPainted(false);
+        jPanel1.add(ButtonPerawat);
+        ButtonPerawat.setBounds(450, 380, 190, 30);
+
+        ButtonPegawai.setBackground(new java.awt.Color(153, 255, 255));
+        ButtonPegawai.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ButtonPegawai.setText("PEGAWAI");
+        ButtonPegawai.setBorderPainted(false);
+        jPanel1.add(ButtonPegawai);
+        ButtonPegawai.setBounds(690, 380, 180, 30);
+
+        IconDokter.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\GitHub\\ALPHANCODERS_Hospital-Management-Time\\ALPHANCODERS_HospitalManagementTime\\src\\main\\java\\Assets\\ICON\\Dokter.png")); // NOI18N
+        jPanel1.add(IconDokter);
+        IconDokter.setBounds(220, 230, 180, 180);
+
+        IconPerawat.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\GitHub\\ALPHANCODERS_Hospital-Management-Time\\ALPHANCODERS_HospitalManagementTime\\src\\main\\java\\Assets\\ICON\\Perawat.png")); // NOI18N
+        jPanel1.add(IconPerawat);
+        IconPerawat.setBounds(460, 240, 170, 150);
+
+        IconPegawai.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\GitHub\\ALPHANCODERS_Hospital-Management-Time\\ALPHANCODERS_HospitalManagementTime\\src\\main\\java\\Assets\\ICON\\Pegawai.png")); // NOI18N
+        jPanel1.add(IconPegawai);
+        IconPegawai.setBounds(700, 240, 160, 150);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("CHOOSE YOUR ROLES");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(260, 130, 540, 60);
+
+        BG.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\GitHub\\ALPHANCODERS_Hospital-Management-Time\\ALPHANCODERS_HospitalManagementTime\\src\\main\\java\\Assets\\Gambar\\Blank.png")); // NOI18N
+        jPanel1.add(BG);
+        BG.setBounds(0, -10, 1067, 610);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1066, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ButtonDokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDokterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonDokterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +147,14 @@ public class SetRole extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BG;
+    private javax.swing.JButton ButtonDokter;
+    private javax.swing.JButton ButtonPegawai;
+    private javax.swing.JButton ButtonPerawat;
+    private javax.swing.JLabel IconDokter;
+    private javax.swing.JLabel IconPegawai;
+    private javax.swing.JLabel IconPerawat;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
