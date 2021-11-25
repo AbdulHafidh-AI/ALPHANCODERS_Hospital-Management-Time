@@ -4,6 +4,8 @@
  */
 package GUI;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 /**
  *
  * @author LENOVO C740
@@ -15,6 +17,14 @@ public class SetRole extends javax.swing.JFrame {
      */
     public SetRole() {
         initComponents();
+        // mengambil ukuran layar
+        Dimension layar = Toolkit.getDefaultToolkit().getScreenSize();
+
+        // membuat titik x dan y
+        int x = layar.width / 2  - this.getSize().width / 2;
+        int y = layar.height / 2 - this.getSize().height / 2;
+
+        this.setLocation(x, y);
     }
 
     /**
@@ -37,7 +47,6 @@ public class SetRole extends javax.swing.JFrame {
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         jPanel1.setMaximumSize(new java.awt.Dimension(700, 800));
         jPanel1.setLayout(null);
@@ -61,6 +70,11 @@ public class SetRole extends javax.swing.JFrame {
         ButtonPerawat.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ButtonPerawat.setText("PERAWAT");
         ButtonPerawat.setBorderPainted(false);
+        ButtonPerawat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonPerawatActionPerformed(evt);
+            }
+        });
         jPanel1.add(ButtonPerawat);
         ButtonPerawat.setBounds(450, 380, 190, 30);
 
@@ -68,18 +82,23 @@ public class SetRole extends javax.swing.JFrame {
         ButtonPegawai.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ButtonPegawai.setText("PEGAWAI");
         ButtonPegawai.setBorderPainted(false);
+        ButtonPegawai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonPegawaiActionPerformed(evt);
+            }
+        });
         jPanel1.add(ButtonPegawai);
         ButtonPegawai.setBounds(690, 380, 180, 30);
 
-        IconDokter.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\GitHub\\ALPHANCODERS_Hospital-Management-Time\\ALPHANCODERS_HospitalManagementTime\\src\\main\\java\\Assets\\ICON\\Dokter.png")); // NOI18N
+        IconDokter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/ICON/Dokter.png"))); // NOI18N
         jPanel1.add(IconDokter);
         IconDokter.setBounds(220, 230, 180, 180);
 
-        IconPerawat.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\GitHub\\ALPHANCODERS_Hospital-Management-Time\\ALPHANCODERS_HospitalManagementTime\\src\\main\\java\\Assets\\ICON\\Perawat.png")); // NOI18N
+        IconPerawat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/ICON/Perawat.png"))); // NOI18N
         jPanel1.add(IconPerawat);
         IconPerawat.setBounds(460, 240, 170, 150);
 
-        IconPegawai.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\GitHub\\ALPHANCODERS_Hospital-Management-Time\\ALPHANCODERS_HospitalManagementTime\\src\\main\\java\\Assets\\ICON\\Pegawai.png")); // NOI18N
+        IconPegawai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/ICON/Pegawai.png"))); // NOI18N
         jPanel1.add(IconPegawai);
         IconPegawai.setBounds(700, 240, 160, 150);
 
@@ -89,7 +108,7 @@ public class SetRole extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(260, 130, 540, 60);
 
-        BG.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\GitHub\\ALPHANCODERS_Hospital-Management-Time\\ALPHANCODERS_HospitalManagementTime\\src\\main\\java\\Assets\\Gambar\\Blank.png")); // NOI18N
+        BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/Gambar/Blank.png"))); // NOI18N
         jPanel1.add(BG);
         BG.setBounds(0, -10, 1067, 610);
 
@@ -108,8 +127,22 @@ public class SetRole extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonDokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDokterActionPerformed
-        // TODO add your handling code here:
+        DokterLogin objekDokter = new DokterLogin();
+        objekDokter.setVisible(true);
+        dispose();
     }//GEN-LAST:event_ButtonDokterActionPerformed
+
+    private void ButtonPerawatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPerawatActionPerformed
+        PerawatLogin objekPerawat = new PerawatLogin();
+        objekPerawat.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonPerawatActionPerformed
+
+    private void ButtonPegawaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPegawaiActionPerformed
+        PegawaiLogin objekPegawai = new PegawaiLogin();
+        objekPegawai.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_ButtonPegawaiActionPerformed
 
     /**
      * @param args the command line arguments

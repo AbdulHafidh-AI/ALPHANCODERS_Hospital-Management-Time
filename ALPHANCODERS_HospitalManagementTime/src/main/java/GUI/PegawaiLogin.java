@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
-
+import java.awt.Dimension;
+import java.awt.Toolkit;
 /**
  *
  * @author ASUS
@@ -15,6 +16,14 @@ public class PegawaiLogin extends javax.swing.JFrame {
      */
     public PegawaiLogin() {
         initComponents();
+         // mengambil ukuran layar
+         Dimension layar = Toolkit.getDefaultToolkit().getScreenSize();
+
+         // membuat titik x dan y
+         int x = layar.width / 2  - this.getSize().width / 2;
+         int y = layar.height / 2 - this.getSize().height / 2;
+ 
+         this.setLocation(x, y);
     }
 
     /**
