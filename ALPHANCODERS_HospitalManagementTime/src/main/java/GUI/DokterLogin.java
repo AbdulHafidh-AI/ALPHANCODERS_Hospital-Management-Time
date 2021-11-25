@@ -88,7 +88,7 @@ public class DokterLogin extends javax.swing.JFrame {
         jPanel1.add(tfID);
         tfID.setBounds(270, 240, 280, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/Gambar/Blank.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Blank.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, -20, 860, 610);
 
