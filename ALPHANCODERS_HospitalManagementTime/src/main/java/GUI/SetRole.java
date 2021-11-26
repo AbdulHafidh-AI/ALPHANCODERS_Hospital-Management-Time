@@ -55,8 +55,6 @@ public class SetRole extends javax.swing.JFrame {
         ButtonDokter.setBackground(new java.awt.Color(153, 255, 255));
         ButtonDokter.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ButtonDokter.setText("DOKTER");
-        ButtonDokter.setAlignmentY(0.0F);
-        ButtonDokter.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         ButtonDokter.setBorderPainted(false);
         ButtonDokter.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         ButtonDokter.addActionListener(new java.awt.event.ActionListener() {
