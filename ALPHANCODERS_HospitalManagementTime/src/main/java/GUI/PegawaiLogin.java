@@ -7,12 +7,12 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 /**
  *
- * @author ASUS
+ * @author LENOVO C740
  */
 public class PegawaiLogin extends javax.swing.JFrame {
 
     /**
-     * Creates new form PegawaiLogin
+     * Creates new form DokterLogin
      */
     public PegawaiLogin() {
         initComponents();
@@ -36,71 +36,81 @@ public class PegawaiLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        LoginTextDokter = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jBSignUp = new javax.swing.JButton();
+        tfPIN = new javax.swing.JTextField();
+        tfID = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel2.setText("LOGIN");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(320, 50, 180, 40);
+        LoginTextDokter.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        LoginTextDokter.setText("LOGIN");
+        jPanel1.add(LoginTextDokter);
+        LoginTextDokter.setBounds(330, 90, 160, 80);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setText("ID");
+        jLabel3.setText("PIN\n");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(280, 140, 30, 29);
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(280, 170, 230, 30);
+        jLabel3.setBounds(270, 310, 50, 29);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel4.setText("PIN");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(280, 210, 50, 30);
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(280, 250, 230, 30);
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setText("ID");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(270, 210, 50, 29);
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("SIGN UP");
+        jButton1.setText("SIGN IN");
         jPanel1.add(jButton1);
-        jButton1.setBounds(280, 290, 93, 25);
+        jButton1.setBounds(450, 420, 100, 25);
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setText("SIGN IN");
-        jPanel1.add(jButton2);
-        jButton2.setBounds(413, 290, 100, 25);
+        jBSignUp.setBackground(new java.awt.Color(204, 204, 204));
+        jBSignUp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBSignUp.setText("SIGN UP");
+        jBSignUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSignUpActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBSignUp);
+        jBSignUp.setBounds(270, 420, 100, 25);
+
+        tfPIN.setText("\n");
+        jPanel1.add(tfPIN);
+        tfPIN.setBounds(270, 350, 280, 40);
+        jPanel1.add(tfID);
+        tfID.setBounds(270, 240, 280, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Blank.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 510, 360);
+        jLabel1.setBounds(0, -20, 860, 610);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 507, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(270, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 857, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSignUpActionPerformed
+       DokterSignUp objekDokterSignUp = new DokterSignUp();
+       objekDokterSignUp.setVisible(true);
+       dispose();
+    }//GEN-LAST:event_jBSignUpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,6 +138,7 @@ public class PegawaiLogin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(PegawaiLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -138,14 +149,14 @@ public class PegawaiLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LoginTextDokter;
+    private javax.swing.JButton jBSignUp;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField tfID;
+    private javax.swing.JTextField tfPIN;
     // End of variables declaration//GEN-END:variables
 }

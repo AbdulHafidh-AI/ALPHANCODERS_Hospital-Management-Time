@@ -74,7 +74,7 @@ public class PerawatSignUp extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Register.png"))); // NOI18N
         jLabel3.setText("BACK");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(-10, 0, 1070, 610);
+        jLabel3.setBounds(0, -10, 1050, 620);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
