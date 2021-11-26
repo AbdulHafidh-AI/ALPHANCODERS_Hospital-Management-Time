@@ -7,12 +7,12 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 /**
  *
- * @author ASUS
+ * @author LENOVO C740
  */
 public class PegawaiLogin extends javax.swing.JFrame {
 
     /**
-     * Creates new form PegawaiLogin
+     * Creates new form DokterLogin
      */
     public PegawaiLogin() {
         initComponents();
@@ -35,21 +35,82 @@ public class PegawaiLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        LoginTextDokter = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jBSignUp = new javax.swing.JButton();
+        tfPIN = new javax.swing.JTextField();
+        tfID = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jPanel1.setLayout(null);
+
+        LoginTextDokter.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        LoginTextDokter.setText("LOGIN");
+        jPanel1.add(LoginTextDokter);
+        LoginTextDokter.setBounds(330, 90, 160, 80);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setText("PIN\n");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(270, 310, 50, 29);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setText("ID");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(270, 210, 50, 29);
+
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setText("SIGN IN");
+        jPanel1.add(jButton1);
+        jButton1.setBounds(450, 420, 100, 25);
+
+        jBSignUp.setBackground(new java.awt.Color(204, 204, 204));
+        jBSignUp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBSignUp.setText("SIGN UP");
+        jBSignUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSignUpActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBSignUp);
+        jBSignUp.setBounds(270, 420, 100, 25);
+
+        tfPIN.setText("\n");
+        jPanel1.add(tfPIN);
+        tfPIN.setBounds(270, 350, 280, 40);
+        jPanel1.add(tfID);
+        tfID.setBounds(270, 240, 280, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Blank.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(0, -20, 860, 610);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 857, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSignUpActionPerformed
+       DokterSignUp objekDokterSignUp = new DokterSignUp();
+       objekDokterSignUp.setVisible(true);
+       dispose();
+    }//GEN-LAST:event_jBSignUpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,6 +138,7 @@ public class PegawaiLogin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(PegawaiLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -87,5 +149,14 @@ public class PegawaiLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LoginTextDokter;
+    private javax.swing.JButton jBSignUp;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField tfID;
+    private javax.swing.JTextField tfPIN;
     // End of variables declaration//GEN-END:variables
 }
