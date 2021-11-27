@@ -9,7 +9,10 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import Classes.AkunDokter;
+
+import javax.swing.JOptionPane;
+
+import Classes.AkunPegawai;
 /**
  *
  * @author LENOVO C740
@@ -39,7 +42,7 @@ public class PegawaiSignUp extends javax.swing.JFrame {
     private static void tambahAkun(ArrayList<String> data) throws IOException
     {
         // Memanggil method constructor tanpa disertai parameter
-        AkunDokter akun = new AkunDokter();
+        AkunPegawai akun = new AkunPegawai();
 
         FileWriter fileWriter = new FileWriter("DatabasePegawai.txt",true);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -132,9 +135,9 @@ public class PegawaiSignUp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonReturnActionPerformed
-        DokterLogin objekDokterLogin = new DokterLogin();
-        objekDokterLogin.setVisible(true);
-        dispose();
+       PegawaiLogin pegawaiLogin = new PegawaiLogin();
+       pegawaiLogin.setVisible(true);
+       dispose();
     }//GEN-LAST:event_ButtonReturnActionPerformed
 
     private void ButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonResetActionPerformed
@@ -160,6 +163,7 @@ public class PegawaiSignUp extends javax.swing.JFrame {
         } catch (IOException e) {
             
         }
+        JOptionPane.showMessageDialog(this, "YOUR ID IS " + id + " AND YOUR PIN IS 5555");
        
     }//GEN-LAST:event_ButtonRegisterActionPerformed
 

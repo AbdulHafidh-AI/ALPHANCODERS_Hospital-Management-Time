@@ -9,6 +9,9 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
 import Classes.AkunDokter;
 /**
  *
@@ -160,6 +163,7 @@ public class DokterSignUp extends javax.swing.JFrame {
         } catch (IOException e) {
             
         }
+        JOptionPane.showMessageDialog(this, "yOUR ID IS " + id + " AND YOUR PIN IS 5555");
        
     }//GEN-LAST:event_ButtonRegisterActionPerformed
 

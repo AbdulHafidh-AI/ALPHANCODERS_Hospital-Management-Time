@@ -3,18 +3,53 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
-
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import Classes.AkunPerawat;
 /**
  *
  * @author natti
  */
 public class PerawatSignUp extends javax.swing.JFrame {
 
+     // Khusus untuk reg pertama akan didapatkan Id secara acak
+     static int random = (int) (Math.random() * (1000000 - 100000)) + 100000;
+     // convert dia ke string karena data bilangan ini akan di simpan di file database beresktensi .txt
+     static String id = Integer.toString(random);
+
     /**
      * Creates new form PerawatSignUp
      */
     public PerawatSignUp() {
         initComponents();
+        // mengambil ukuran layar
+        Dimension layar = Toolkit.getDefaultToolkit().getScreenSize();
+
+        // membuat titik x dan y
+        int x = layar.width / 2  - this.getSize().width / 2;
+        int y = layar.height / 2 - this.getSize().height / 2;
+
+        this.setLocation(x, y);
+    }
+
+    private static void tambahAkun(ArrayList<String> data) throws IOException
+    {
+        // Memanggil method constructor tanpa disertai parameter
+        AkunPerawat akun = new AkunPerawat();
+
+        FileWriter fileWriter = new FileWriter("DatabasePerawat.txt",true);
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+        bufferedWriter.write(id + "," + akun.getPin() + "," + data.get(2) + "," + data.get(1) + "," + data.get(0));
+        bufferedWriter.newLine();
+        bufferedWriter.flush();
+        // Wajib tutup
+        bufferedWriter.close();
     }
 
     /**
@@ -27,12 +62,12 @@ public class PerawatSignUp extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        tfUserName = new javax.swing.JTextField();
+        tfGender = new javax.swing.JTextField();
+        tfAddress = new javax.swing.JTextField();
+        jButtonReset = new javax.swing.JButton();
+        jButtonRegister = new javax.swing.JButton();
+        jButtonBack = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,36 +75,51 @@ public class PerawatSignUp extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tfUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tfUserNameActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(410, 230, 220, 40);
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(410, 300, 220, 40);
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(410, 370, 220, 40);
+        jPanel1.add(tfUserName);
+        tfUserName.setBounds(410, 230, 220, 40);
+        jPanel1.add(tfGender);
+        tfGender.setBounds(410, 300, 220, 40);
+        jPanel1.add(tfAddress);
+        tfAddress.setBounds(410, 370, 220, 40);
 
-        jButton1.setBackground(new java.awt.Color(255, 102, 102));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton1.setText("RESET");
-        jPanel1.add(jButton1);
-        jButton1.setBounds(690, 300, 100, 40);
+        jButtonReset.setBackground(new java.awt.Color(255, 102, 102));
+        jButtonReset.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonReset.setText("RESET");
+        jButtonReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonResetActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonReset);
+        jButtonReset.setBounds(690, 300, 100, 40);
 
-        jButton2.setBackground(new java.awt.Color(204, 255, 255));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton2.setText("REGISTER");
-        jPanel1.add(jButton2);
-        jButton2.setBounds(780, 500, 150, 40);
+        jButtonRegister.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonRegister.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonRegister.setText("REGISTER");
+        jButtonRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegisterActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonRegister);
+        jButtonRegister.setBounds(780, 500, 150, 40);
 
-        jButton3.setBackground(new java.awt.Color(204, 255, 255));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton3.setText("BACK");
-        jButton3.setToolTipText("");
-        jPanel1.add(jButton3);
-        jButton3.setBounds(100, 500, 120, 40);
+        jButtonBack.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonBack.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonBack.setText("BACK");
+        jButtonBack.setToolTipText("");
+        jButtonBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBackActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonBack);
+        jButtonBack.setBounds(100, 500, 120, 40);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Register.png"))); // NOI18N
         jLabel3.setText("BACK");
@@ -90,9 +140,40 @@ public class PerawatSignUp extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tfUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUserNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tfUserNameActionPerformed
+
+    private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterActionPerformed
+        // Inisialisasi varibel dalam kasus membuat akun pekerja rumah sakit
+        String nama, alamat, jk;
+        // DATA COLLECTION
+        ArrayList<String> data = new ArrayList<>();
+        nama = tfUserName.getText();
+        data.add(nama);
+        alamat = tfAddress.getText();
+        data.add(alamat);
+        jk = tfGender.getText();
+        data.add(jk);
+        try {
+            tambahAkun(data);
+        } catch (IOException e) {
+            
+        }
+        JOptionPane.showMessageDialog(this, "yOUR ID IS " + id + " AND YOUR PIN IS 5555");
+    }//GEN-LAST:event_jButtonRegisterActionPerformed
+
+    private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
+        PerawatLogin perawatLogin = new PerawatLogin();
+        perawatLogin.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButtonBackActionPerformed
+
+    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
+        tfUserName.setText("");
+        tfGender.setText("");
+        tfAddress.setText("");
+    }//GEN-LAST:event_jButtonResetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,13 +211,13 @@ public class PerawatSignUp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonBack;
+    private javax.swing.JButton jButtonRegister;
+    private javax.swing.JButton jButtonReset;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField tfAddress;
+    private javax.swing.JTextField tfGender;
+    private javax.swing.JTextField tfUserName;
     // End of variables declaration//GEN-END:variables
 }
