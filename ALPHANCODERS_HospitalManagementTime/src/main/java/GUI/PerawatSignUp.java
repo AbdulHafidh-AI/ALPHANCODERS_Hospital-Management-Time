@@ -9,6 +9,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import Classes.AkunPerawat;
 /**
  *
@@ -144,7 +145,22 @@ public class PerawatSignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_tfUserNameActionPerformed
 
     private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterActionPerformed
-        // TODO add your handling code here:
+        // Inisialisasi varibel dalam kasus membuat akun pekerja rumah sakit
+        String nama, alamat, jk;
+        // DATA COLLECTION
+        ArrayList<String> data = new ArrayList<>();
+        nama = tfUserName.getText();
+        data.add(nama);
+        alamat = tfAddress.getText();
+        data.add(alamat);
+        jk = tfGender.getText();
+        data.add(jk);
+        try {
+            tambahAkun(data);
+        } catch (IOException e) {
+            
+        }
+        JOptionPane.showMessageDialog(this, "yOUR ID IS " + id + " AND YOUR PIN IS 5555");
     }//GEN-LAST:event_jButtonRegisterActionPerformed
 
     private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
