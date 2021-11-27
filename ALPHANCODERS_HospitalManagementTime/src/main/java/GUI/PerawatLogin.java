@@ -3,18 +3,63 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
-
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import Classes.Perawat;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+import javax.swing.JOptionPane;
+import Classes.Pasien;
 /**
  *
  * @author HP
  */
 public class PerawatLogin extends javax.swing.JFrame {
-
+    // Fields
+    static private Perawat pengguna;
     /**
      * Creates new form PerawatLogin
      */
     public PerawatLogin() {
         initComponents();
+        // mengambil ukuran layar
+        Dimension layar = Toolkit.getDefaultToolkit().getScreenSize();
+
+        // membuat titik x dan y
+        int x = layar.width / 2  - this.getSize().width / 2;
+        int y = layar.height / 2 - this.getSize().height / 2;
+
+        this.setLocation(x, y);
+    }
+
+     
+   private static boolean checkID(String id) throws IOException
+   {
+       boolean dataWujud = true;
+       // Membuak file database
+       FileReader fileReader = new FileReader("DatabasePerawat.txt");
+       BufferedReader bufferedReader = new BufferedReader(fileReader);
+       // Mencari id di file database tersebut
+       String data = bufferedReader.readLine();
+       StringTokenizer stringTokenizer = new StringTokenizer(data,",");
+       // Membaca keseluruhan file
+       while(data != null){
+           stringTokenizer = new StringTokenizer(data,",");
+           // Kondisi jika ditemukan id pekerja
+           if(id.equals(stringTokenizer.nextToken())){
+               dataWujud = true;
+               break;
+           }else{
+               dataWujud = false;
+           }
+           // Membaca baris setelahnya
+           data = bufferedReader.readLine();
+       }
+       // wajib tutup!!!
+       bufferedReader.close();
+       return dataWujud;
     }
 
     /**
@@ -68,6 +113,11 @@ public class PerawatLogin extends javax.swing.JFrame {
         btSignIn.setBackground(new java.awt.Color(204, 204, 204));
         btSignIn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btSignIn.setText("SIGN IN");
+        btSignIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSignInActionPerformed(evt);
+            }
+        });
         jPanel1.add(btSignIn);
         btSignIn.setBounds(510, 430, 100, 30);
 
@@ -103,12 +153,54 @@ public class PerawatLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSignUpActionPerformed
-        // TODO add your handling code here:
+        PerawatSignUp perawatSignUp = new PerawatSignUp();
+        perawatSignUp.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btSignUpActionPerformed
 
     private void tfPINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPINActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfPINActionPerformed
+
+    private void btSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSignInActionPerformed
+        String id;
+        int pin;
+        id = tfID.getText();
+        pin = Integer.parseInt(tfPIN.getText());
+        // Membuat Objek
+        Pasien objekPasien  = new Pasien();
+        jadwalKondisiPertama jadwalKondisiPertama = new jadwalKondisiPertama();
+        jadwalKondisiKedua jadwalKondisiKedua = new jadwalKondisiKedua();
+        jadwalKondisiKetiga jadwalKondisiKetiga = new jadwalKondisiKetiga();
+        jadwalKondisiKeempat jadwalKondisiKeempat = new jadwalKondisiKeempat();
+        try {
+            if(checkID(id)){
+                pengguna = new Perawat(id);
+                if(pin == pengguna.getPin()){ 
+                    if(objekPasien.getJamKerjaMinimal() == 3){
+                    jadwalKondisiPertama.setVisible(true);
+                    dispose();
+                }else if(objekPasien.getJamKerjaMinimal() == 5){
+                    jadwalKondisiKedua.setVisible(true);
+                    dispose();
+                }else if(objekPasien.getJamKerjaMinimal() == 8){
+                    jadwalKondisiKetiga.setVisible(true);
+                    dispose();
+                }else{
+                    jadwalKondisiKeempat.setVisible(true);
+                    dispose();
+                }
+            }else{
+                JOptionPane.showMessageDialog(this, "ID DAN PIN ANDA TIDAK DITEMUKAN SILAHKAN MENDAFTAR DI BAGIAN SIGN UP ");
+            }
+               
+            }else{
+                JOptionPane.showMessageDialog(this, "ID DAN PIN ANDA TIDAK DITEMUKAN SILAHKAN MENDAFTAR DI BAGIAN SIGN UP ");
+            }
+        } catch (IOException e) {
+            
+        }
+    }//GEN-LAST:event_btSignInActionPerformed
 
     /**
      * @param args the command line arguments

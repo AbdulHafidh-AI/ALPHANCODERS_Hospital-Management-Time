@@ -3,18 +3,61 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
-
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import Classes.Pegawai;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+import javax.swing.JOptionPane;
 /**
  *
  * @author HP
  */
 public class PegawaiLogin extends javax.swing.JFrame {
-
+    // Fields
+    static private Pegawai pengguna;
     /**
      * Creates new form PegawaiLogin
      */
     public PegawaiLogin() {
         initComponents();
+        // mengambil ukuran layar
+        Dimension layar = Toolkit.getDefaultToolkit().getScreenSize();
+
+        // membuat titik x dan y
+        int x = layar.width / 2  - this.getSize().width / 2;
+        int y = layar.height / 2 - this.getSize().height / 2;
+
+        this.setLocation(x, y);
+    }
+
+    private static boolean checkID(String id) throws IOException
+   {
+       boolean dataWujud = true;
+       // Membuak file database
+       FileReader fileReader = new FileReader("DatabasePegawai.txt");
+       BufferedReader bufferedReader = new BufferedReader(fileReader);
+       // Mencari id di file database tersebut
+       String data = bufferedReader.readLine();
+       StringTokenizer stringTokenizer = new StringTokenizer(data,",");
+       // Membaca keseluruhan file
+       while(data != null){
+           stringTokenizer = new StringTokenizer(data,",");
+           // Kondisi jika ditemukan id pekerja
+           if(id.equals(stringTokenizer.nextToken())){
+               dataWujud = true;
+               break;
+           }else{
+               dataWujud = false;
+           }
+           // Membaca baris setelahnya
+           data = bufferedReader.readLine();
+       }
+       // wajib tutup!!!
+       bufferedReader.close();
+       return dataWujud;
     }
 
     /**
@@ -62,6 +105,11 @@ public class PegawaiLogin extends javax.swing.JFrame {
         BSignIn.setBackground(new java.awt.Color(204, 204, 204));
         BSignIn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         BSignIn.setText("SIGN IN");
+        BSignIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BSignInActionPerformed(evt);
+            }
+        });
         jPanel1.add(BSignIn);
         BSignIn.setBounds(490, 390, 120, 30);
 
@@ -95,8 +143,36 @@ public class PegawaiLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BSignUpActionPerformed
-        // TODO add your handling code here:
+        PegawaiSignUp PegawaiSignUp = new PegawaiSignUp();
+        PegawaiSignUp.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BSignUpActionPerformed
+
+    private void BSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BSignInActionPerformed
+        String id;
+        int pin;
+        id = ID.getText();
+        pin = Integer.parseInt(PIN.getText());
+        // Membuat Objek
+        jadwalTetapPegawai jadwalTetapPegawai= new jadwalTetapPegawai();
+        try {
+            if(checkID(id)){
+                pengguna = new Pegawai(id);
+                if(pin == pengguna.getPin()){
+                    jadwalTetapPegawai.setVisible(true);
+                    dispose();
+                }else{
+                    JOptionPane.showMessageDialog(this, "ID DAN PIN ANDA TIDAK DITEMUKAN SILAHKAN MENDAFTAR DI SIGN UP");
+                }
+            }else{
+                JOptionPane.showMessageDialog(this, "ID DAN PIN ANDA TIDAK DITEMUKAN SILAHKAN MENDAFTAR DI SIGN UP");
+            }
+        } catch (Exception e) {
+           
+        }
+
+        
+    }//GEN-LAST:event_BSignInActionPerformed
 
     /**
      * @param args the command line arguments

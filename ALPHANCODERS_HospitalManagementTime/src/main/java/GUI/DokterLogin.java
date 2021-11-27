@@ -171,7 +171,7 @@ public class DokterLogin extends javax.swing.JFrame {
         int pin;
         id = tfID.getText();
         pin = Integer.parseInt(tfPIN.getText());
-        // membuat objek pasien
+        // membuat objek 
         Pasien objekPasien  = new Pasien();
         jadwalKondisiPertama jadwalKondisiPertama = new jadwalKondisiPertama();
         jadwalKondisiKedua jadwalKondisiKedua = new jadwalKondisiKedua();
