@@ -107,8 +107,8 @@ public class PerawatLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSignUpActionPerformed
-       DokterSignUp objekDokterSignUp = new DokterSignUp();
-       objekDokterSignUp.setVisible(true);
+       PerawatSignUp perawatSignUp = new PerawatSignUp();
+       perawatSignUp.setVisible(true);
        dispose();
     }//GEN-LAST:event_jBSignUpActionPerformed
 

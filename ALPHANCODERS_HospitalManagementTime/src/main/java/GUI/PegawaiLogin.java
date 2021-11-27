@@ -107,8 +107,8 @@ public class PegawaiLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSignUpActionPerformed
-       DokterSignUp objekDokterSignUp = new DokterSignUp();
-       objekDokterSignUp.setVisible(true);
+       PegawaiSignUp pegawaiSignUp = new PegawaiSignUp();
+       pegawaiSignUp.setVisible(true);
        dispose();
     }//GEN-LAST:event_jBSignUpActionPerformed
 
