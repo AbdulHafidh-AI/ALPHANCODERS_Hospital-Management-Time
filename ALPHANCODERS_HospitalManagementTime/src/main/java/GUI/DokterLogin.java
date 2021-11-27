@@ -128,7 +128,7 @@ public class DokterLogin extends javax.swing.JFrame {
         jPanel1.add(jBSignUp);
         jBSignUp.setBounds(270, 420, 100, 25);
         jPanel1.add(tfPIN);
-        tfPIN.setBounds(270, 350, 280, 40);
+        tfPIN.setBounds(270, 340, 310, 40);
 
         tfID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,21 +136,21 @@ public class DokterLogin extends javax.swing.JFrame {
             }
         });
         jPanel1.add(tfID);
-        tfID.setBounds(270, 240, 280, 40);
+        tfID.setBounds(270, 240, 310, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Blank.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, -20, 860, 610);
+        jLabel1.setBounds(0, -20, 930, 640);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 857, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 927, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE)
         );
 
         pack();
