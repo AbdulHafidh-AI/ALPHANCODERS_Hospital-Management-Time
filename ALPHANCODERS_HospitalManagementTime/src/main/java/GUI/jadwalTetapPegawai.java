@@ -36,7 +36,7 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
-        BG.setBounds(2, 0, 1280, 720);
+        BG.setBounds(10, 0, 1280, 720);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
