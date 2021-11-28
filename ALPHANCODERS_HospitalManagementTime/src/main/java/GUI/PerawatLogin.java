@@ -10,37 +10,31 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
-import Classes.Pasien;
 import javax.swing.JOptionPane;
-
+import Classes.Pasien;
 /**
  *
- * @author LENOVO C740
+ * @author HP
  */
 public class PerawatLogin extends javax.swing.JFrame {
     // Fields
     static private Perawat pengguna;
     /**
-     * Creates new form DokterLogin
+     * Creates new form PerawatLogin
      */
     public PerawatLogin() {
         initComponents();
-         // mengambil ukuran layar
-         Dimension layar = Toolkit.getDefaultToolkit().getScreenSize();
+        // mengambil ukuran layar
+        Dimension layar = Toolkit.getDefaultToolkit().getScreenSize();
 
-         // membuat titik x dan y
-         int x = layar.width / 2  - this.getSize().width / 2;
-         int y = layar.height / 2 - this.getSize().height / 2;
- 
-         this.setLocation(x, y);
+        // membuat titik x dan y
+        int x = layar.width / 2  - this.getSize().width / 2;
+        int y = layar.height / 2 - this.getSize().height / 2;
+
+        this.setLocation(x, y);
     }
 
-    /**
-     * Sebuah Method untuk mengecek id dari database
-     * @param id
-     * @return dataWujud
-     * @throws IOException
-     */
+     
    private static boolean checkID(String id) throws IOException
    {
        boolean dataWujud = true;
@@ -78,93 +72,103 @@ public class PerawatLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        LoginTextDokter = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButtonRegister = new javax.swing.JButton();
-        jBSignUp = new javax.swing.JButton();
-        tfPIN = new javax.swing.JTextField();
+        LoginTitle = new javax.swing.JLabel();
+        IDtitle = new javax.swing.JLabel();
         tfID = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        PINtitle = new javax.swing.JLabel();
+        tfPIN = new javax.swing.JTextField();
+        btSignIn = new javax.swing.JButton();
+        btSignUp = new javax.swing.JButton();
+        BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setLayout(null);
 
-        LoginTextDokter.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        LoginTextDokter.setText("LOGIN");
-        jPanel1.add(LoginTextDokter);
-        LoginTextDokter.setBounds(330, 90, 160, 80);
+        LoginTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        LoginTitle.setText("LOGIN");
+        jPanel1.add(LoginTitle);
+        LoginTitle.setBounds(360, 120, 160, 90);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setText("PIN\n");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(270, 310, 50, 29);
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setText("ID");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(270, 210, 50, 29);
-
-        jButtonRegister.setBackground(new java.awt.Color(204, 204, 204));
-        jButtonRegister.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonRegister.setText("SIGN IN");
-        jButtonRegister.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRegisterActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButtonRegister);
-        jButtonRegister.setBounds(450, 420, 100, 25);
-
-        jBSignUp.setBackground(new java.awt.Color(204, 204, 204));
-        jBSignUp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jBSignUp.setText("SIGN UP");
-        jBSignUp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBSignUpActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jBSignUp);
-        jBSignUp.setBounds(270, 420, 100, 25);
-
-        tfPIN.setText("\n");
-        jPanel1.add(tfPIN);
-        tfPIN.setBounds(270, 350, 280, 40);
+        IDtitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        IDtitle.setText("ID");
+        jPanel1.add(IDtitle);
+        IDtitle.setBounds(270, 210, 60, 40);
         jPanel1.add(tfID);
-        tfID.setBounds(270, 240, 280, 40);
+        tfID.setBounds(270, 250, 340, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Blank.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, -20, 860, 610);
+        PINtitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        PINtitle.setText("PIN");
+        jPanel1.add(PINtitle);
+        PINtitle.setBounds(270, 320, 60, 30);
+
+        tfPIN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfPINActionPerformed(evt);
+            }
+        });
+        jPanel1.add(tfPIN);
+        tfPIN.setBounds(270, 350, 340, 40);
+
+        btSignIn.setBackground(new java.awt.Color(204, 204, 204));
+        btSignIn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btSignIn.setText("SIGN IN");
+        btSignIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSignInActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btSignIn);
+        btSignIn.setBounds(510, 430, 100, 30);
+
+        btSignUp.setBackground(new java.awt.Color(204, 204, 204));
+        btSignUp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btSignUp.setText("SIGN UP");
+        btSignUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSignUpActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btSignUp);
+        btSignUp.setBounds(270, 430, 100, 30);
+
+        BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/Blank.png"))); // NOI18N
+        jPanel1.add(BG);
+        BG.setBounds(0, 0, 920, 600);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 857, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 920, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSignUpActionPerformed
-       PerawatSignUp perawatSignUp = new PerawatSignUp();
-       perawatSignUp.setVisible(true);
-       dispose();
-    }//GEN-LAST:event_jBSignUpActionPerformed
+    private void btSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSignUpActionPerformed
+        PerawatSignUp perawatSignUp = new PerawatSignUp();
+        perawatSignUp.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btSignUpActionPerformed
 
-    private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterActionPerformed
+    private void tfPINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPINActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfPINActionPerformed
+
+    private void btSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSignInActionPerformed
         String id;
         int pin;
         id = tfID.getText();
         pin = Integer.parseInt(tfPIN.getText());
-        // membuat objek pasien
+        // Membuat Objek
         Pasien objekPasien  = new Pasien();
         jadwalKondisiPertama jadwalKondisiPertama = new jadwalKondisiPertama();
         jadwalKondisiKedua jadwalKondisiKedua = new jadwalKondisiKedua();
@@ -197,7 +201,7 @@ public class PerawatLogin extends javax.swing.JFrame {
         } catch (IOException e) {
             
         }
-    }//GEN-LAST:event_jButtonRegisterActionPerformed
+    }//GEN-LAST:event_btSignInActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,7 +229,6 @@ public class PerawatLogin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(PerawatLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -236,12 +239,12 @@ public class PerawatLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel LoginTextDokter;
-    private javax.swing.JButton jBSignUp;
-    private javax.swing.JButton jButtonRegister;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel BG;
+    private javax.swing.JLabel IDtitle;
+    private javax.swing.JLabel LoginTitle;
+    private javax.swing.JLabel PINtitle;
+    private javax.swing.JButton btSignIn;
+    private javax.swing.JButton btSignUp;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField tfID;
     private javax.swing.JTextField tfPIN;

@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
-
+import java.time.LocalDate;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import javax.swing.JOptionPane; 
 /**
  *
  * @author ACER
@@ -15,6 +18,14 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
      */
     public jadwalTetapPegawai() {
         initComponents();
+        // mengambil ukuran layar
+        Dimension layar = Toolkit.getDefaultToolkit().getScreenSize();
+
+        // membuat titik x dan y
+        int x = layar.width / 2  - this.getSize().width / 2;
+        int y = layar.height / 2 - this.getSize().height / 2;
+
+        this.setLocation(x, y);
     }
 
     /**
@@ -26,7 +37,15 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        buttonJadwalPertama = new javax.swing.JRadioButton();
+        jRadioButtonJadwalKetiga = new javax.swing.JRadioButton();
+        buttonJadwalKedua = new javax.swing.JRadioButton();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -34,9 +53,50 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(80, 250, 80, 80);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/date.png"))); // NOI18N
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(70, 230, 90, 120);
+
+        jButton2.setContentAreaFilled(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton2);
+        jButton2.setBounds(90, 400, 60, 80);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logout.png"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(90, 390, 70, 100);
+
+        buttonGroup1.add(buttonJadwalPertama);
+        buttonJadwalPertama.setText("07.00-15.00");
+        jPanel2.add(buttonJadwalPertama);
+        buttonJadwalPertama.setBounds(280, 220, 93, 23);
+
+        buttonGroup1.add(jRadioButtonJadwalKetiga);
+        jRadioButtonJadwalKetiga.setText("23.00-06.00");
+        jPanel2.add(jRadioButtonJadwalKetiga);
+        jRadioButtonJadwalKetiga.setBounds(570, 220, 93, 23);
+
+        buttonGroup1.add(buttonJadwalKedua);
+        buttonJadwalKedua.setText("15.00-23.00");
+        jPanel2.add(buttonJadwalKedua);
+        buttonJadwalKedua.setBounds(420, 220, 93, 23);
+
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
-        BG.setBounds(2, 0, 1280, 720);
+        BG.setBounds(10, 0, 1280, 720);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -51,6 +111,15 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       LocalDate objekMelihatTanggal = LocalDate.now();
+       JOptionPane.showMessageDialog(this, "TANGGAL HARI INI ADALAH: " + objekMelihatTanggal);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,6 +159,14 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JRadioButton buttonJadwalKedua;
+    private javax.swing.JRadioButton buttonJadwalPertama;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JRadioButton jRadioButtonJadwalKetiga;
     // End of variables declaration//GEN-END:variables
 }
