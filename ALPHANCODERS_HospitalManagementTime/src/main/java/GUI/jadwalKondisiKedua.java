@@ -35,13 +35,80 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel2.setLayout(null);
+
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1);
+        jButton1.setBounds(60, 240, 90, 80);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/date.png"))); // NOI18N
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(60, 240, 100, 80);
+
+        jButton2.setContentAreaFilled(false);
+        jPanel2.add(jButton2);
+        jButton2.setBounds(70, 420, 70, 70);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logout.png"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(70, 420, 70, 70);
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setText("07:00 - 12:00");
+        jRadioButton1.setActionCommand("07:00 - 12:00");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jRadioButton1);
+        jRadioButton1.setBounds(290, 230, 100, 23);
+
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("12:00 - 17:00");
+        jPanel2.add(jRadioButton2);
+        jRadioButton2.setBounds(430, 230, 100, 23);
+
+        buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setText("17:00 - 22:00");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jRadioButton3);
+        jRadioButton3.setBounds(570, 230, 100, 23);
+
+        buttonGroup1.add(jRadioButton4);
+        jRadioButton4.setText("22:00 - 03:00");
+        jPanel2.add(jRadioButton4);
+        jRadioButton4.setBounds(710, 230, 100, 23);
+
+        buttonGroup1.add(jRadioButton5);
+        jRadioButton5.setText("03:00 - 08:00");
+        jPanel2.add(jRadioButton5);
+        jRadioButton5.setBounds(850, 230, 100, 23);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
@@ -60,6 +127,18 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,6 +178,16 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
     // End of variables declaration//GEN-END:variables
 }
