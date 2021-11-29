@@ -12,8 +12,9 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import Classes.AkunPerawat;
 /**
- *
- * @author natti
+ * Sebuah class untuk melakukan registrasi untuk perawat
+ * @author Alphancoders
+ * @version 2021.11.27
  */
 public class PerawatSignUp extends javax.swing.JFrame {
 

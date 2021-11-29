@@ -9,13 +9,12 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-
 import javax.swing.JOptionPane;
-
 import Classes.AkunDokter;
 /**
- *
- * @author LENOVO C740
+ * Sebuah class untuk melakukan proses registrasi pada dokter
+ * @author Alphancoders
+ * @version 2021.11.29
  */
 public class DokterSignUp extends javax.swing.JFrame {
 
@@ -38,7 +37,11 @@ public class DokterSignUp extends javax.swing.JFrame {
 
         this.setLocation(x, y);
     }
-
+    /**
+     * Sebuah method untuk menambah akun
+     * @param data
+     * @throws IOException
+     */
     private static void tambahAkun(ArrayList<String> data) throws IOException
     {
         // Memanggil method constructor tanpa disertai parameter

@@ -13,8 +13,9 @@ import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
 import Classes.Pasien;
 /**
- *
- * @author LENOVO C740
+ * Sebuah class untuk melakukan proses login pada dokter
+ * @author Alphancoders
+ * @version 2021.11.27
  */
 public class DokterLogin extends javax.swing.JFrame {
     // Fields

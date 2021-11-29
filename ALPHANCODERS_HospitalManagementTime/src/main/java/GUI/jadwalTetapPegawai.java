@@ -8,8 +8,9 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane; 
 /**
- *
- * @author ACER
+ * sebuah class untuk memilih jadwal kerja
+ * @author Alphancoders
+ * @version 2021.11.27
  */
 public class jadwalTetapPegawai extends javax.swing.JFrame {
 
@@ -43,9 +44,14 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        buttonJadwalPertama = new javax.swing.JRadioButton();
+        jRadiobuttonJadwalPertama = new javax.swing.JRadioButton();
         jRadioButtonJadwalKetiga = new javax.swing.JRadioButton();
-        buttonJadwalKedua = new javax.swing.JRadioButton();
+        jRadiobuttonJadwalKedua = new javax.swing.JRadioButton();
+        buttonProses = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,20 +85,57 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
         jPanel2.add(jLabel2);
         jLabel2.setBounds(90, 390, 70, 100);
 
-        buttonGroup1.add(buttonJadwalPertama);
-        buttonJadwalPertama.setText("07.00-15.00");
-        jPanel2.add(buttonJadwalPertama);
-        buttonJadwalPertama.setBounds(280, 220, 93, 23);
+        jRadiobuttonJadwalPertama.setBackground(new java.awt.Color(204, 255, 255));
+        buttonGroup1.add(jRadiobuttonJadwalPertama);
+        jRadiobuttonJadwalPertama.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jRadiobuttonJadwalPertama.setText("07.00-15.00");
+        jPanel2.add(jRadiobuttonJadwalPertama);
+        jRadiobuttonJadwalPertama.setBounds(280, 220, 120, 50);
 
+        jRadioButtonJadwalKetiga.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButtonJadwalKetiga);
-        jRadioButtonJadwalKetiga.setText("23.00-06.00");
+        jRadioButtonJadwalKetiga.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jRadioButtonJadwalKetiga.setText("23:00-06:00");
         jPanel2.add(jRadioButtonJadwalKetiga);
-        jRadioButtonJadwalKetiga.setBounds(570, 220, 93, 23);
+        jRadioButtonJadwalKetiga.setBounds(570, 220, 120, 50);
 
-        buttonGroup1.add(buttonJadwalKedua);
-        buttonJadwalKedua.setText("15.00-23.00");
-        jPanel2.add(buttonJadwalKedua);
-        buttonJadwalKedua.setBounds(420, 220, 93, 23);
+        jRadiobuttonJadwalKedua.setBackground(new java.awt.Color(204, 255, 255));
+        buttonGroup1.add(jRadiobuttonJadwalKedua);
+        jRadiobuttonJadwalKedua.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jRadiobuttonJadwalKedua.setText("15:00-23:00");
+        jPanel2.add(jRadiobuttonJadwalKedua);
+        jRadiobuttonJadwalKedua.setBounds(420, 220, 120, 50);
+
+        buttonProses.setBackground(new java.awt.Color(204, 204, 255));
+        buttonProses.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        buttonProses.setText("CEK JADWAL");
+        buttonProses.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonProsesActionPerformed(evt);
+            }
+        });
+        jPanel2.add(buttonProses);
+        buttonProses.setBounds(900, 420, 150, 25);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("CHOOSE YOUR FAVOURITE TIME ^_^");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(690, 150, 290, 30);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 0, 51));
+        jLabel3.setText("ANDA BEKERJA SEBAGAI PEGAWAI DI RUMAH SAKIT INI");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(360, 580, 560, 90);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(51, 51, 51));
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(240, 460, 820, 70);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
@@ -120,6 +163,24 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void buttonProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonProsesActionPerformed
+        String pernyataan;
+        if(jRadiobuttonJadwalPertama.isSelected()){
+            pernyataan = "WAKTU MASUK : 07:00" + 
+                         "\nWAKTU KELUAR: 15:00"
+            ;
+        }else if(jRadiobuttonJadwalKedua.isSelected()){
+            pernyataan = "WAKTU MASUK: 15:00" + 
+                         "\nWAKTU KELUAR: 23:00"
+            ;
+        }else{
+            pernyataan = "WAKTU MASUK: 23:00" + 
+                         "\nWAKTU KELUAR: 06:00"
+            ;
+        }
+        jTextArea1.setText(pernyataan);
+    }//GEN-LAST:event_buttonProsesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,13 +221,18 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JRadioButton buttonJadwalKedua;
-    private javax.swing.JRadioButton buttonJadwalPertama;
+    private javax.swing.JButton buttonProses;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButtonJadwalKetiga;
+    private javax.swing.JRadioButton jRadiobuttonJadwalKedua;
+    private javax.swing.JRadioButton jRadiobuttonJadwalPertama;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

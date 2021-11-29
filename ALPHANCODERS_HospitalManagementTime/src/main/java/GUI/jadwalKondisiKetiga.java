@@ -8,8 +8,9 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane; 
 /**
- *
- * @author ACER
+ * sebuah class untuk memilih jadwal kerja
+ * @author Alphancoders
+ * @version 2021.11.27
  */
 public class jadwalKondisiKetiga extends javax.swing.JFrame {
 
@@ -46,6 +47,9 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
+        jButtonCekJadwal = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -95,6 +99,22 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
         jPanel2.add(jRadioButton3);
         jRadioButton3.setBounds(850, 220, 100, 23);
 
+        jButtonCekJadwal.setText("CEK JADWAL");
+        jButtonCekJadwal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCekJadwalActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonCekJadwal);
+        jButtonCekJadwal.setBounds(890, 410, 110, 23);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(230, 450, 800, 76);
+
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
         BG.setBounds(0, 0, 1280, 720);
@@ -121,6 +141,21 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
     private void jButtonLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogoutActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButtonLogoutActionPerformed
+
+    private void jButtonCekJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCekJadwalActionPerformed
+        String pernyataan;
+        if(jRadioButton1.isSelected()){
+            pernyataan = "WAKTU MASUK: 07:00"
+                        +"\nWAKTU KELUAR: 15:00";
+        }else if(jRadioButton2.isSelected()){
+            pernyataan = "WAKTU MASUK: 15:00"
+                        +"\nWAKTU KELUAR: 23:00";
+        }else{
+            pernyataan = "WAKTU MASUK: 23:00"
+                        +"\nWAKTU KELUAR: 06:00";
+        }
+        jTextArea1.setText(pernyataan);
+    }//GEN-LAST:event_jButtonCekJadwalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,6 +196,7 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButtonCekJadwal;
     private javax.swing.JButton jButtonLogout;
     private javax.swing.JButton jButtonTanggal;
     private javax.swing.JLabel jLabel1;
@@ -169,5 +205,7 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

@@ -7,8 +7,9 @@ package GUI;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 /**
- *
- * @author LENOVO C740
+ * Sebuah class untuk melakukan proses pemilihan suatu peran
+ * @author Alphancoders
+ * @version 2021.11.29
  */
 public class SetRole extends javax.swing.JFrame {
 

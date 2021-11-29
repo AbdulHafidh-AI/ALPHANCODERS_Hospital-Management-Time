@@ -13,8 +13,9 @@ import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
 import Classes.Pasien;
 /**
- *
- * @author HP
+ * Sebuah class untuk melakukan proses login untuk perawat
+ * @author Alphancoders
+ * @version 2021.11.26
  */
 public class PerawatLogin extends javax.swing.JFrame {
     // Fields
@@ -33,8 +34,12 @@ public class PerawatLogin extends javax.swing.JFrame {
 
         this.setLocation(x, y);
     }
-
-     
+    /**
+     * Sebuah method untuk melakukan proses pengecekan id di database 
+     * @param id
+     * @return dataWujud
+     * @throws IOException
+     */
    private static boolean checkID(String id) throws IOException
    {
        boolean dataWujud = true;

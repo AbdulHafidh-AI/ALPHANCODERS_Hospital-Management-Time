@@ -12,8 +12,9 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
 /**
- *
- * @author HP
+ * Sebuah class untuk melakukan proses lagin pada pegawai
+ * @author Alphancoders
+ * @version 2021.11.28
  */
 public class PegawaiLogin extends javax.swing.JFrame {
     // Fields
