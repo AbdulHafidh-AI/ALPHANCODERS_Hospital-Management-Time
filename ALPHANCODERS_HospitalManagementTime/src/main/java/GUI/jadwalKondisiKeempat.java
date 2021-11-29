@@ -3,8 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
+import java.time.LocalDate;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ACER
@@ -39,9 +41,9 @@ public class jadwalKondisiKeempat extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton1 = new javax.swing.JRadioButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonLogout = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButtonDate = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
 
@@ -62,22 +64,27 @@ public class jadwalKondisiKeempat extends javax.swing.JFrame {
         jPanel2.add(jRadioButton1);
         jRadioButton1.setBounds(400, 240, 130, 30);
 
-        jButton2.setContentAreaFilled(false);
-        jPanel2.add(jButton2);
-        jButton2.setBounds(80, 400, 70, 80);
+        jButtonLogout.setContentAreaFilled(false);
+        jButtonLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLogoutActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonLogout);
+        jButtonLogout.setBounds(80, 400, 70, 80);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logout.png"))); // NOI18N
         jPanel2.add(jLabel2);
         jLabel2.setBounds(80, 400, 70, 80);
 
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonDate.setContentAreaFilled(false);
+        jButtonDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonDateActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1);
-        jButton1.setBounds(70, 260, 80, 80);
+        jPanel2.add(jButtonDate);
+        jButtonDate.setBounds(70, 260, 80, 80);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/date.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -102,9 +109,15 @@ public class jadwalKondisiKeempat extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButtonDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDateActionPerformed
+         LocalDate objekMelihatTanggal = LocalDate.now();
+        JOptionPane.showMessageDialog(this, "TANGGAL HARI INI ADALAH: " + objekMelihatTanggal);
+    }//GEN-LAST:event_jButtonDateActionPerformed
+
+    private void jButtonLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogoutActionPerformed
+       
+        System.exit(0);
+    }//GEN-LAST:event_jButtonLogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,8 +157,8 @@ public class jadwalKondisiKeempat extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButtonDate;
+    private javax.swing.JButton jButtonLogout;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;

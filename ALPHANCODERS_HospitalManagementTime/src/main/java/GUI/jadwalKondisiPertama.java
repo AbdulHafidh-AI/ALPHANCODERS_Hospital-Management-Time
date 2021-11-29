@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI;
+import java.time.LocalDate;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import javax.swing.JOptionPane; 
 
 /**
  *
@@ -15,6 +19,14 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
      */
     public jadwalKondisiPertama() {
         initComponents();
+        // mengambil ukuran layar
+        Dimension layar = Toolkit.getDefaultToolkit().getScreenSize();
+
+        // membuat titik x dan y
+        int x = layar.width / 2  - this.getSize().width / 2;
+        int y = layar.height / 2 - this.getSize().height / 2;
+
+        this.setLocation(x, y);
     }
 
     /**
@@ -28,9 +40,9 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
+        jButtonLogout = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButtonTanggal = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
@@ -47,18 +59,27 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
+        jButtonLogout.setContentAreaFilled(false);
+        jButtonLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLogoutActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonLogout);
+        jButtonLogout.setBounds(80, 390, 70, 70);
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logout.png"))); // NOI18N
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(80, 390, 70, 70);
+        jLabel2.setBounds(80, 390, 60, 70);
 
-        jButton2.setContentAreaFilled(false);
-        jPanel2.add(jButton2);
-        jButton2.setBounds(80, 390, 70, 70);
-
-        jButton1.setActionCommand("");
-        jButton1.setContentAreaFilled(false);
-        jPanel2.add(jButton1);
-        jButton1.setBounds(70, 240, 80, 80);
+        jButtonTanggal.setContentAreaFilled(false);
+        jButtonTanggal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTanggalActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonTanggal);
+        jButtonTanggal.setBounds(70, 240, 80, 80);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/date.png"))); // NOI18N
         jPanel2.add(jLabel1);
@@ -131,6 +152,15 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
+    private void jButtonTanggalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTanggalActionPerformed
+        LocalDate objekMelihatTanggal = LocalDate.now();
+       JOptionPane.showMessageDialog(this, "TANGGAL HARI INI ADALAH: " + objekMelihatTanggal);
+    }//GEN-LAST:event_jButtonTanggalActionPerformed
+
+    private void jButtonLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogoutActionPerformed
+         System.exit(0);
+    }//GEN-LAST:event_jButtonLogoutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -170,8 +200,8 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButtonLogout;
+    private javax.swing.JButton jButtonTanggal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
