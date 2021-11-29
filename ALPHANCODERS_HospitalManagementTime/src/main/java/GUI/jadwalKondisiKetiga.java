@@ -35,7 +35,15 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,9 +51,43 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
 
         jPanel2.setLayout(null);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/date.png"))); // NOI18N
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(60, 260, 100, 90);
+
+        jButton1.setText("jButton1");
+        jButton1.setContentAreaFilled(false);
+        jPanel2.add(jButton1);
+        jButton1.setBounds(60, 260, 100, 90);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logout.png"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(80, 390, 80, 90);
+
+        jButton2.setText("jButton2");
+        jButton2.setContentAreaFilled(false);
+        jPanel2.add(jButton2);
+        jButton2.setBounds(70, 390, 90, 90);
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setSelected(true);
+        jRadioButton1.setText("07.00 - 15.00");
+        jPanel2.add(jRadioButton1);
+        jRadioButton1.setBounds(310, 220, 100, 23);
+
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("15.00 - 23.00 ");
+        jPanel2.add(jRadioButton2);
+        jRadioButton2.setBounds(570, 220, 100, 23);
+
+        buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setText("23.00 - 06.00");
+        jPanel2.add(jRadioButton3);
+        jRadioButton3.setBounds(850, 220, 100, 23);
+
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
-        BG.setBounds(2, 0, 1280, 720);
+        BG.setBounds(0, 0, 1280, 720);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,6 +141,14 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     // End of variables declaration//GEN-END:variables
 }
