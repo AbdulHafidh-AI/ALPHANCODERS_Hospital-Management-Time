@@ -52,6 +52,7 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        icon_1 = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -136,6 +137,10 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(240, 460, 820, 70);
+
+        icon_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Pegawai 2.png"))); // NOI18N
+        jPanel2.add(icon_1);
+        icon_1.setBounds(1070, 140, 220, 640);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
@@ -225,6 +230,7 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
     private javax.swing.JLabel BG;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton buttonProses;
+    private javax.swing.JLabel icon_1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;

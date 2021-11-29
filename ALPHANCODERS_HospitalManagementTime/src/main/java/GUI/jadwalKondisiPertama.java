@@ -59,6 +59,11 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
         jButtonCekJadwal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        icon_1 = new javax.swing.JLabel();
+        icon_2 = new javax.swing.JLabel();
+        icon_3 = new javax.swing.JLabel();
+        icon_4 = new javax.swing.JLabel();
+        icon_5 = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -128,7 +133,7 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
         jRadioButton5.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton5);
         jRadioButton5.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jRadioButton5.setText("19:00 - 20:00");
+        jRadioButton5.setText("19:00 - 22:00");
         jPanel2.add(jRadioButton5);
         jRadioButton5.setBounds(470, 200, 120, 27);
 
@@ -141,7 +146,7 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
 
         jRadioButton7.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton7);
-        jRadioButton7.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        jRadioButton7.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton7.setText("01:00 - 04:00");
         jPanel2.add(jRadioButton7);
         jRadioButton7.setBounds(470, 300, 130, 27);
@@ -186,6 +191,26 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(240, 430, 810, 116);
+
+        icon_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Doctor & Nurse.png"))); // NOI18N
+        jPanel2.add(icon_1);
+        icon_1.setBounds(1140, 580, 180, 170);
+
+        icon_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/hospital.png"))); // NOI18N
+        jPanel2.add(icon_2);
+        icon_2.setBounds(1070, 460, 260, 290);
+
+        icon_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Awan.png"))); // NOI18N
+        jPanel2.add(icon_3);
+        icon_3.setBounds(1010, 430, 280, 150);
+
+        icon_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Awan.png"))); // NOI18N
+        jPanel2.add(icon_4);
+        icon_4.setBounds(1020, 300, 280, 150);
+
+        icon_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Awan.png"))); // NOI18N
+        jPanel2.add(icon_5);
+        icon_5.setBounds(1110, 350, 280, 150);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
@@ -303,6 +328,11 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel icon_1;
+    private javax.swing.JLabel icon_2;
+    private javax.swing.JLabel icon_3;
+    private javax.swing.JLabel icon_4;
+    private javax.swing.JLabel icon_5;
     private javax.swing.JButton jButtonCekJadwal;
     private javax.swing.JButton jButtonLogout;
     private javax.swing.JButton jButtonTanggal;

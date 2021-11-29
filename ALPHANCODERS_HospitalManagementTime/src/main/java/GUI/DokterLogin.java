@@ -44,7 +44,7 @@ public class DokterLogin extends javax.swing.JFrame {
    private static boolean checkID(String id) throws IOException
    {
        boolean dataWujud = true;
-       // Membuak file database
+       // Membuka file database
        FileReader fileReader = new FileReader("DatabaseDokter.txt");
        BufferedReader bufferedReader = new BufferedReader(fileReader);
        // Mencari id di file database tersebut

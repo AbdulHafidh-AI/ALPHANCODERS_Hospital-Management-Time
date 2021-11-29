@@ -53,6 +53,11 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
         jButtonCekJadwal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        icon_2 = new javax.swing.JLabel();
+        icon_1 = new javax.swing.JLabel();
+        icon_3 = new javax.swing.JLabel();
+        icon_4 = new javax.swing.JLabel();
+        icon_5 = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -141,6 +146,27 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(230, 450, 800, 76);
 
+        icon_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Doctor & Nurse.png"))); // NOI18N
+        jPanel2.add(icon_2);
+        icon_2.setBounds(1140, 600, 120, 120);
+
+        icon_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/hospital.png"))); // NOI18N
+        icon_1.setText("icon_1");
+        jPanel2.add(icon_1);
+        icon_1.setBounds(1070, 460, 250, 280);
+
+        icon_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Awan.png"))); // NOI18N
+        jPanel2.add(icon_3);
+        icon_3.setBounds(1090, 350, 250, 100);
+
+        icon_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Awan.png"))); // NOI18N
+        jPanel2.add(icon_4);
+        icon_4.setBounds(1110, 430, 250, 100);
+
+        icon_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Awan.png"))); // NOI18N
+        jPanel2.add(icon_5);
+        icon_5.setBounds(1010, 420, 250, 100);
+
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
         BG.setBounds(0, 0, 1280, 720);
@@ -228,6 +254,11 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel icon_1;
+    private javax.swing.JLabel icon_2;
+    private javax.swing.JLabel icon_3;
+    private javax.swing.JLabel icon_4;
+    private javax.swing.JLabel icon_5;
     private javax.swing.JButton jButtonCekJadwal;
     private javax.swing.JButton jButtonLogout;
     private javax.swing.JButton jButtonTanggal;

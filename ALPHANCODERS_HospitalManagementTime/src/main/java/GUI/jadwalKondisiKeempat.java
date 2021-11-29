@@ -52,6 +52,11 @@ public class jadwalKondisiKeempat extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButtonCekJadwal = new javax.swing.JButton();
+        icon_2 = new javax.swing.JLabel();
+        icon_1 = new javax.swing.JLabel();
+        icon_3 = new javax.swing.JLabel();
+        icon_4 = new javax.swing.JLabel();
+        icon_5 = new javax.swing.JLabel();
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -133,6 +138,26 @@ public class jadwalKondisiKeempat extends javax.swing.JFrame {
         });
         jPanel2.add(jButtonCekJadwal);
         jButtonCekJadwal.setBounds(830, 400, 140, 25);
+
+        icon_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Doctor & Nurse.png"))); // NOI18N
+        jPanel2.add(icon_2);
+        icon_2.setBounds(1140, 600, 102, 120);
+
+        icon_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/hospital.png"))); // NOI18N
+        jPanel2.add(icon_1);
+        icon_1.setBounds(1070, 480, 250, 240);
+
+        icon_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Awan.png"))); // NOI18N
+        jPanel2.add(icon_3);
+        icon_3.setBounds(1060, 370, 240, 100);
+
+        icon_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Awan.png"))); // NOI18N
+        jPanel2.add(icon_4);
+        icon_4.setBounds(1110, 430, 240, 100);
+
+        icon_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Awan.png"))); // NOI18N
+        jPanel2.add(icon_5);
+        icon_5.setBounds(990, 450, 240, 100);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
@@ -216,6 +241,11 @@ public class jadwalKondisiKeempat extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BG;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel icon_1;
+    private javax.swing.JLabel icon_2;
+    private javax.swing.JLabel icon_3;
+    private javax.swing.JLabel icon_4;
+    private javax.swing.JLabel icon_5;
     private javax.swing.JButton jButtonCekJadwal;
     private javax.swing.JButton jButtonDate;
     private javax.swing.JButton jButtonLogout;
