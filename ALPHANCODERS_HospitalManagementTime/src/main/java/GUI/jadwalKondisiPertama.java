@@ -53,6 +53,9 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
         jRadioButton6 = new javax.swing.JRadioButton();
         jRadioButton7 = new javax.swing.JRadioButton();
         jRadioButton8 = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jButtonCekJadwal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -89,7 +92,9 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
         jPanel2.add(jLabel1);
         jLabel1.setBounds(60, 240, 90, 80);
 
+        jRadioButton1.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton1.setText("07:00 - 10:00");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,43 +102,74 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jRadioButton1);
-        jRadioButton1.setBounds(300, 200, 100, 23);
+        jRadioButton1.setBounds(300, 200, 140, 27);
 
+        jRadioButton2.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton2.setText("10:00 - 13:00");
         jPanel2.add(jRadioButton2);
-        jRadioButton2.setBounds(300, 250, 100, 23);
+        jRadioButton2.setBounds(300, 250, 140, 27);
 
+        jRadioButton3.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton3.setText("13:00 - 16:00");
         jPanel2.add(jRadioButton3);
-        jRadioButton3.setBounds(300, 300, 100, 23);
+        jRadioButton3.setBounds(300, 300, 140, 27);
 
+        jRadioButton4.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton4);
+        jRadioButton4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton4.setText("16:00 - 19:00");
         jPanel2.add(jRadioButton4);
-        jRadioButton4.setBounds(300, 350, 100, 23);
+        jRadioButton4.setBounds(300, 350, 140, 27);
 
+        jRadioButton5.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton5);
+        jRadioButton5.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton5.setText("19:00 - 20:00");
         jPanel2.add(jRadioButton5);
-        jRadioButton5.setBounds(470, 200, 100, 23);
+        jRadioButton5.setBounds(470, 200, 120, 27);
 
+        jRadioButton6.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton6);
+        jRadioButton6.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton6.setText("22:00 - 01:00");
         jPanel2.add(jRadioButton6);
-        jRadioButton6.setBounds(470, 250, 100, 23);
+        jRadioButton6.setBounds(470, 250, 120, 27);
 
+        jRadioButton7.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton7);
+        jRadioButton7.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jRadioButton7.setText("01:00 - 04:00");
         jPanel2.add(jRadioButton7);
-        jRadioButton7.setBounds(470, 300, 100, 23);
+        jRadioButton7.setBounds(470, 300, 130, 27);
 
+        jRadioButton8.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton8);
+        jRadioButton8.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton8.setText("04:00 - 07:00");
         jPanel2.add(jRadioButton8);
-        jRadioButton8.setBounds(470, 350, 100, 23);
+        jRadioButton8.setBounds(470, 350, 140, 27);
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("WAKTU KERJA ANDA MINIMAL 3 JAM DIKARENKAN ANDA MENANGANI KURANG LEBIH 20 PASIEN");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(290, 630, 870, 17);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setText("CHOOSE YOUR FAVOURITE TIME ^_^");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(660, 160, 410, 22);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("ANDA BERPERAN SEBAGAI TENAGA MEDIS DI RUMAH SAKIT INI");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(340, 590, 610, 22);
+
+        jButtonCekJadwal.setBackground(new java.awt.Color(255, 204, 255));
+        jButtonCekJadwal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonCekJadwal.setText("CEK JADWAL");
         jButtonCekJadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,14 +177,15 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButtonCekJadwal);
-        jButtonCekJadwal.setBounds(800, 380, 140, 23);
+        jButtonCekJadwal.setBounds(800, 380, 140, 30);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(280, 430, 740, 76);
+        jScrollPane1.setBounds(240, 430, 810, 116);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
@@ -185,28 +222,44 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
         String pernyataan;
         if(jRadioButton1.isSelected()){
             pernyataan = "WAKTU MASUK: 07:00" + 
-                         "\nWAKTU KELUAR: 10:00";
+                         "\nWAKTU KELUAR: 10:00" +
+                         "\nANDA HARUS MASUK JAM 7 PAGI DAN DIPERBOLEHKAN PULANG JAM 10 PAGI"
+                    ;
         }else if(jRadioButton2.isSelected()){
             pernyataan = "WAKTU MASUK: 10:00" + 
-                         "\nWAKTU KELUAR: 13:00";
+                         "\nWAKTU KELUAR: 13:00" +
+                         "\nANDA HARUS MASUK JAM 10 PAGI DAN DIPERBOLEHKAN PULANG JAM 1 SIANG"
+                    ;
         }else if(jRadioButton3.isSelected()){
             pernyataan = "WAKTU MASUK: 13:00" + 
-                         "\nWAKTU KELUAR: 16:00";
+                         "\nWAKTU KELUAR: 16:00" +
+                         "\nANDA HARUS MASUK JAM 1 SIANG DAN DIPERBOLEHKAN PULANG JAM 4 SORE"
+                    ;
         }else if(jRadioButton4.isSelected()){
             pernyataan = "WAKTU MASUK: 16:00" + 
-                         "\nWAKTU KELUAR: 19:00";
+                         "\nWAKTU KELUAR: 19:00" +
+                         "\nANDA HARUS MASUK JAM 4 SORE DAN DIPERBOLEHKAN PULANG JAM 7 MALAM"
+                    ;
         }else if(jRadioButton5.isSelected()){
             pernyataan = "WAKTU MASUK: 19:00" + 
-                         "\nWAKTU KELUAR: 22:00";
+                         "\nWAKTU KELUAR: 22:00" +
+                         "\nANDA HARUS MASUK JAM 7 MALAM DAN DIPERBOLEHKAN PULANG JAM 10 MALAM"
+                    ;
         }else if(jRadioButton6.isSelected()){
             pernyataan = "WAKTU MASUK: 22:00" + 
-                         "\nWAKTU KELUAR: 01:00";
+                         "\nWAKTU KELUAR: 01:00"+
+                         "\nANDA HARUS MASUK JAM 10 MALAM DAN DIPERBOLEHKAN PULANG JAM 1 MALAM"
+                    ;
         }else if(jRadioButton7.isSelected()){
             pernyataan = "WAKTU MASUK: 01:00" + 
-                         "\nWAKTU KELUAR: 04:00";
+                         "\nWAKTU KELUAR: 04:00" +
+                         "\nANDA HARUS MASUK JAM 1 MALAM DAN DIPERBOLEHKAN PULANG JAM 4 PAGI"
+                    ;
         }else{
             pernyataan = "WAKTU MASUK: 04:00" + 
-                         "\nWAKTU KELUAR: 07:00";
+                         "\nWAKTU KELUAR: 07:00" +
+                         "\nANDA HARUS MASUK JAM 4 PAGI DAN DIPERBOLEHKAN PULANG JAM 7 PAGI"
+                    ;
         }
         jTextArea1.setText(pernyataan);  
     }//GEN-LAST:event_jButtonCekJadwalActionPerformed
@@ -255,6 +308,9 @@ public class jadwalKondisiPertama extends javax.swing.JFrame {
     private javax.swing.JButton jButtonTanggal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;

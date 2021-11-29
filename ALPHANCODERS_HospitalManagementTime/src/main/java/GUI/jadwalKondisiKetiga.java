@@ -47,6 +47,9 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jButtonCekJadwal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -83,22 +86,45 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
         jPanel2.add(jLabel2);
         jLabel2.setBounds(80, 390, 80, 90);
 
+        jRadioButton1.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("07.00 - 15.00");
         jPanel2.add(jRadioButton1);
-        jRadioButton1.setBounds(310, 220, 100, 23);
+        jRadioButton1.setBounds(310, 220, 130, 25);
 
+        jRadioButton2.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButton2.setText("15.00 - 23.00 ");
         jPanel2.add(jRadioButton2);
-        jRadioButton2.setBounds(570, 220, 100, 23);
+        jRadioButton2.setBounds(570, 220, 130, 25);
 
+        jRadioButton3.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButton3.setText("23.00 - 06.00");
         jPanel2.add(jRadioButton3);
-        jRadioButton3.setBounds(850, 220, 100, 23);
+        jRadioButton3.setBounds(850, 220, 120, 25);
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("WAKTU KERJA ANDA MINIMAL 8 JAM DIKARENAKAN ANDA MENANGANI KURANG LEBIH 80 PASIEN");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(304, 630, 730, 17);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("ANDA BERPERAN SEBAGAI TENAGA MEDIS DI RUMAH SAKIT INI ");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(370, 590, 620, 22);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setText("CHOOSE YOUR FAVOURITE TIME ^_^");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(664, 100, 360, 22);
+
+        jButtonCekJadwal.setBackground(new java.awt.Color(255, 153, 255));
+        jButtonCekJadwal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonCekJadwal.setText("CEK JADWAL");
         jButtonCekJadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +132,7 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButtonCekJadwal);
-        jButtonCekJadwal.setBounds(890, 410, 110, 23);
+        jButtonCekJadwal.setBounds(850, 410, 150, 25);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -146,13 +172,19 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
         String pernyataan;
         if(jRadioButton1.isSelected()){
             pernyataan = "WAKTU MASUK: 07:00"
-                        +"\nWAKTU KELUAR: 15:00";
+                        +"\nWAKTU KELUAR: 15:00"
+                        +"\nANDA HARUS MASUK JAM 7 PAGI DAN DIPERBOLEHKAN PULANG JAM 3 SORE"
+                    ;
         }else if(jRadioButton2.isSelected()){
             pernyataan = "WAKTU MASUK: 15:00"
-                        +"\nWAKTU KELUAR: 23:00";
+                        +"\nWAKTU KELUAR: 23:00"
+                        +"\nANDA HARUS MASUK JAM 3 SORE DAN DIPERBOLEHKAN PULANG JAM 11 MALAM"
+                    ;
         }else{
             pernyataan = "WAKTU MASUK: 23:00"
-                        +"\nWAKTU KELUAR: 06:00";
+                        +"\nWAKTU KELUAR: 06:00"
+                        +"\nANDA HARUS MASUK JAM 11 MALAM DAN DIPERBOLEHKAN PULANG JAM 6 PAGI"
+                    ;
         }
         jTextArea1.setText(pernyataan);
     }//GEN-LAST:event_jButtonCekJadwalActionPerformed
@@ -201,6 +233,9 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
     private javax.swing.JButton jButtonTanggal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;

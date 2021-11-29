@@ -49,6 +49,9 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jButtonCekJadwal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -66,11 +69,11 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButtonTanggal);
-        jButtonTanggal.setBounds(60, 240, 90, 80);
+        jButtonTanggal.setBounds(70, 290, 90, 80);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/date.png"))); // NOI18N
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(60, 240, 100, 80);
+        jLabel1.setBounds(60, 290, 100, 80);
 
         jButtonLogout.setContentAreaFilled(false);
         jButtonLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -79,13 +82,15 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButtonLogout);
-        jButtonLogout.setBounds(70, 420, 70, 70);
+        jButtonLogout.setBounds(80, 420, 70, 70);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/logout.png"))); // NOI18N
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(70, 420, 70, 70);
+        jLabel2.setBounds(80, 420, 70, 70);
 
+        jRadioButton1.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton1.setText("07:00 - 12:00");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,14 +98,18 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jRadioButton1);
-        jRadioButton1.setBounds(290, 230, 100, 23);
+        jRadioButton1.setBounds(290, 230, 120, 27);
 
+        jRadioButton2.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton2.setText("12:00 - 17:00");
         jPanel2.add(jRadioButton2);
-        jRadioButton2.setBounds(430, 230, 100, 23);
+        jRadioButton2.setBounds(430, 230, 120, 27);
 
+        jRadioButton3.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton3);
+        jRadioButton3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton3.setText("17:00 - 22:00");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,18 +117,39 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jRadioButton3);
-        jRadioButton3.setBounds(570, 230, 100, 23);
+        jRadioButton3.setBounds(290, 280, 120, 27);
 
+        jRadioButton4.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton4);
+        jRadioButton4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton4.setText("22:00 - 03:00");
         jPanel2.add(jRadioButton4);
-        jRadioButton4.setBounds(710, 230, 100, 23);
+        jRadioButton4.setBounds(430, 280, 120, 27);
 
+        jRadioButton5.setBackground(new java.awt.Color(204, 255, 255));
         buttonGroup1.add(jRadioButton5);
+        jRadioButton5.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jRadioButton5.setText("03:00 - 08:00");
         jPanel2.add(jRadioButton5);
-        jRadioButton5.setBounds(850, 230, 100, 23);
+        jRadioButton5.setBounds(290, 330, 121, 27);
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("ANDA BERPERAN SEBAGAI TENAGA MEDIS DI RUMAH SAKIT INI");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(360, 610, 720, 22);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("WAKTU KERJA ANDA MINIMAL 5 JAM DIKARENAKAN ANDA MENANGANI KURANG LEBIH 40 PASIEN");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(310, 660, 730, 17);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setText("CHOOSE YOUR FAVOURITE TIME ^_^");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(650, 150, 370, 22);
+
+        jButtonCekJadwal.setBackground(new java.awt.Color(255, 153, 255));
+        jButtonCekJadwal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonCekJadwal.setText("CEK JADWAL");
         jButtonCekJadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,18 +157,19 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButtonCekJadwal);
-        jButtonCekJadwal.setBounds(830, 430, 110, 23);
+        jButtonCekJadwal.setBounds(890, 410, 150, 25);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(230, 460, 750, 76);
+        jScrollPane1.setBounds(250, 450, 810, 116);
 
         BG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Gambar/5.png"))); // NOI18N
         jPanel2.add(BG);
-        BG.setBounds(2, 0, 1280, 720);
+        BG.setBounds(10, 20, 1280, 720);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -175,20 +206,30 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
         String pernyataan;
         if(jRadioButton1.isSelected()){
             pernyataan = "WAKTU MASUK: 07:00"
-                        +"\nWAKTU KELUAR: 12:00";
+                        +"\nWAKTU KELUAR: 12:00" +
+                         "\nANDA HARUS MASUK JAM 7 PAGI DAN DIPERBOLEHKAN PULANG JAM 12 SIANG"
+                    ;
         }else if(jRadioButton2.isSelected()){
             pernyataan = "WAKTU MASUK: 12:00"
-                        +"\nWAKTU KELUAR: 17:00";
+                        +"\nWAKTU KELUAR: 17:00" +
+                         "\nANDA HARUS MASUK JAM 12 SIANG DAN DIPERBOLEHKAN PULANG JAM 5 SORE"
+                    ;
         }else if(jRadioButton3.isSelected()){
             pernyataan = "WAKTU MASUK: 17:00"
-                        +"\nWAKTU KELUAR: 22:00";
+                        +"\nWAKTU KELUAR: 22:00" +
+                         "\nANDA HARUS MASUK JAM 5 SORE DAN PULANG JAM 10 MALAM"
+                    ;
         }else if(jRadioButton4.isSelected()){
-            pernyataan = "WAKTU MASUK: 12:00"
-                        +"\nWAKTU KELUAR: 17:00";
+            pernyataan = "WAKTU MASUK: 22:00"
+                        +"\nWAKTU KELUAR: 03:00"
+                        +"\nANDA HARUS MASUK JAM 10 MALAM DAN PULANG JAM 3 PAGI "
+                    ;
 
         }else{
-            pernyataan = "WAKTU MASUK: 12:00"
-                        +"\nWAKTU KELUAR: 17:00";
+            pernyataan = "WAKTU MASUK: 03:00"
+                        +"\nWAKTU KELUAR: 08:00" +
+                         "\nANDA HARUS MASUK JAM 3 PAGI DAN DIPERBOLEHKAN PULANG JAM 8 PAGI"
+                    ;
         }
         jTextArea1.setText(pernyataan);
     }//GEN-LAST:event_jButtonCekJadwalActionPerformed
@@ -237,6 +278,9 @@ public class jadwalKondisiKedua extends javax.swing.JFrame {
     private javax.swing.JButton jButtonTanggal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;

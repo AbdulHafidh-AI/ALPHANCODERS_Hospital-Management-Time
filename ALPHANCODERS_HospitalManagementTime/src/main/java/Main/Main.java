@@ -7,8 +7,9 @@ package Main;
 import GUI.SetRole;
 
 /**
- *
- * @author LENOVO C740
+ * Sebuah class yang bertujuan untuk memanggil halaman pertama yaitu class set role yang ada di didalam package GUI
+ * @author Alphancoders
+ * @version 2021.11.29
  */
 public class Main {
     public static void main(String args[]) {

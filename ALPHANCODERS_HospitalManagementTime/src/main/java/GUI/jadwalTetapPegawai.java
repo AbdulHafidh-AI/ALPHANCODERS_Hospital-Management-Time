@@ -124,7 +124,7 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 0, 51));
-        jLabel3.setText("ANDA BEKERJA SEBAGAI PEGAWAI DI RUMAH SAKIT INI");
+        jLabel3.setText("ANDA BERPERAN SEBAGAI PEGAWAI DI RUMAH SAKIT INI");
         jPanel2.add(jLabel3);
         jLabel3.setBounds(360, 580, 560, 90);
 
@@ -168,15 +168,18 @@ public class jadwalTetapPegawai extends javax.swing.JFrame {
         String pernyataan;
         if(jRadiobuttonJadwalPertama.isSelected()){
             pernyataan = "WAKTU MASUK : 07:00" + 
-                         "\nWAKTU KELUAR: 15:00"
+                         "\nWAKTU KELUAR: 15:00" +
+                         "\nANDA HARUS MASUK JAM 7 PAGI DAN DIPERBOLEHKAN KELUAR JAM 3 SORE"
             ;
         }else if(jRadiobuttonJadwalKedua.isSelected()){
             pernyataan = "WAKTU MASUK: 15:00" + 
-                         "\nWAKTU KELUAR: 23:00"
+                         "\nWAKTU KELUAR: 23:00" +
+                         "\nANDA HARUS MASUK JAM 3 SORE DAN DIPERBOLEHKAN PULANG JAM 11 MALAM"
             ;
         }else{
             pernyataan = "WAKTU MASUK: 23:00" + 
-                         "\nWAKTU KELUAR: 06:00"
+                         "\nWAKTU KELUAR: 06:00" +
+                         "\nANDA HARUS MASUK JAM 11 MALAM DAN DIPERBOLEHKAN PULANG JAM 6 PAGI"
             ;
         }
         jTextArea1.setText(pernyataan);

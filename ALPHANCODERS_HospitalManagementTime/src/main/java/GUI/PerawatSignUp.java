@@ -161,7 +161,7 @@ public class PerawatSignUp extends javax.swing.JFrame {
         } catch (IOException e) {
             
         }
-        JOptionPane.showMessageDialog(this, "yOUR ID IS " + id + " AND YOUR PIN IS 5555");
+        JOptionPane.showMessageDialog(this, "YOUR ID IS " + id + " AND YOUR PIN IS 5555");
     }//GEN-LAST:event_jButtonRegisterActionPerformed
 
     private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
