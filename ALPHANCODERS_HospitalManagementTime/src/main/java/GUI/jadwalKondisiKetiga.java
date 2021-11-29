@@ -140,11 +140,12 @@ public class jadwalKondisiKetiga extends javax.swing.JFrame {
         jButtonCekJadwal.setBounds(850, 410, 150, 25);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(230, 450, 800, 76);
+        jScrollPane1.setBounds(230, 450, 800, 91);
 
         icon_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Doctor & Nurse.png"))); // NOI18N
         jPanel2.add(icon_2);
