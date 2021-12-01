@@ -26,7 +26,7 @@ Repositori ini berisi tentang projek yang dikerjakan oleh kelompok 1 (ALPHANCODE
 5. type this command
 <pre><code> $ java Main.Main </code></pre>
 
-### CLICK THIS LINK BELOW TO SEE OUR PRESENTATION 
+### COPY THIS LINK BELOW TO SEE OUR PRESENTATION 
             https://www.youtube.com/watch?v=G43B8HsGcDE
 
 
