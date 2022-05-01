@@ -16,7 +16,7 @@ Repositori ini berisi tentang projek yang dikerjakan oleh kelompok 1 (ALPHANCODE
 ### HOW TO RUN THIS APPLICATION?
 <hr>
 1. Clone Repository
-<pre><code> $ git clone https://github.com/Bravehard700/ALPHANCODERS_Hospital-Management-Time.git </code></pre>
+<pre><code> $ git clone https://github.com/AbdulHafidh-AI/ALPHANCODERS_Hospital-Management-Time.git </code></pre>
 2. go to folder ALPHANCODERS_HospitalManagementTime
 <pre><code> $ cd ALPHANCODERS_HospitalManagementTime </code></pre>
 3. go to folder target
@@ -26,8 +26,6 @@ Repositori ini berisi tentang projek yang dikerjakan oleh kelompok 1 (ALPHANCODE
 5. type this command
 <pre><code> $ java Main.Main </code></pre>
 
-### COPY THIS LINK BELOW TO SEE OUR PRESENTATION 
-            https://www.youtube.com/watch?v=G43B8HsGcDE
 
 
 
